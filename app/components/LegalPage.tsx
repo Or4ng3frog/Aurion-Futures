@@ -9,7 +9,7 @@ export default function LegalPage({ title, intro, children }: LegalPageProps) {
     <main className="legal-shell text-white">
       <div className="mx-auto max-w-5xl px-5 py-10 lg:px-8 lg:py-14">
         <a href="/" className="mb-8 inline-flex items-center gap-3 text-sm font-bold text-white/70 transition hover:text-white">
-          <img src="/assets/aurion-mark.svg" alt="Aurion Futures" className="h-8 w-8" />
+          <img src="/assets/aurion-favicon-exact.png" alt="Aurion Futures" className="h-8 w-8" />
           Back to Aurion Futures
         </a>
 

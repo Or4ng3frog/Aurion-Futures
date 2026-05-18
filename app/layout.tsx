@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Aurion Futures | AI Tools, Automation & digitales Wachstum',
+  title: 'Aurion Futures | AI Tools, Automation & Digital Growth',
   description:
-    'Aurion Futures kuratiert AI-Tools, Automatisierungssysteme und digitale Einkommenslösungen für Creator, Trader und Unternehmer.',
+    'Aurion Futures curates AI tools, automation systems and digital income solutions for creators, traders and entrepreneurs.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Aurion Futures',
-    description: 'AI Tools, Automatisierung und digitale Einkommenssysteme — kuratiert von Aurion Futures.',
+    description: 'AI tools, automation and digital income systems curated by Aurion Futures.',
     type: 'website'
   }
 };
@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

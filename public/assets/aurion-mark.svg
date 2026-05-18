@@ -1,11 +1,12 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#C12EFF"/>
-    <stop offset="100%" stop-color="#2D94FF"/>
-  </linearGradient>
-</defs>
-<polygon points="32,224 112,32 144,32 64,224" fill="url(#g)"/>
-<polygon points="110,150 186,150 206,188 130,188" fill="url(#g)"/>
-<polygon points="140,32 224,188 182,188 114,64" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="40" y1="24" x2="214" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D24AFF"/>
+      <stop offset="55%" stop-color="#7E4CFF"/>
+      <stop offset="100%" stop-color="#2597FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M34 218L112 36H145L67 218H34Z" fill="url(#g)"/>
+  <path d="M109 152H185L200 182H124L109 152Z" fill="url(#g)"/>
+  <path d="M146 36L224 182H185L118 56H137L146 36Z" fill="url(#g)"/>
 </svg>

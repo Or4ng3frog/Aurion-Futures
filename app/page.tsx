@@ -2,7 +2,7 @@ const featuredTools = [
   {
     name: 'Framer',
     category: 'Website',
-    description: 'Moderne, schnelle und AI-gestützte Websites ohne Code erstellen.',
+    description: 'Build premium websites with AI-powered speed and clean modern design.',
     icon: 'F',
     href: '#',
     accent: 'from-sky-400 to-cyan-300'
@@ -10,7 +10,7 @@ const featuredTools = [
   {
     name: 'Synthesia',
     category: 'Video',
-    description: 'Professionelle AI-Avatar-Videos für Marketing, Sales und Education produzieren.',
+    description: 'Create professional AI avatar videos for marketing, education and sales.',
     icon: 'S',
     href: '#',
     accent: 'from-indigo-300 to-violet-300'
@@ -18,7 +18,7 @@ const featuredTools = [
   {
     name: 'Pictory',
     category: 'Content',
-    description: 'Lange Inhalte, Skripte und Artikel in kurze, teilbare Clips verwandeln.',
+    description: 'Turn long-form content, scripts and articles into short viral clips.',
     icon: 'P',
     href: '#',
     accent: 'from-fuchsia-300 to-violet-300'
@@ -26,7 +26,7 @@ const featuredTools = [
   {
     name: 'Writesonic',
     category: 'Copywriting',
-    description: 'Landingpages, Ads, SEO-Texte und Kampagnen in Sekunden erstellen.',
+    description: 'Generate landing pages, ad copy, SEO content and campaigns faster.',
     icon: 'WS',
     href: '#',
     accent: 'from-sky-400 to-fuchsia-300'
@@ -34,7 +34,7 @@ const featuredTools = [
   {
     name: 'ElevenLabs',
     category: 'Voice',
-    description: 'Realistische AI-Stimmen für Videos, Podcasts und Produkt-Demos generieren.',
+    description: 'Create realistic AI voices for videos, podcasts and product demos.',
     icon: 'EL',
     href: '#',
     accent: 'from-zinc-100 to-white'
@@ -43,49 +43,50 @@ const featuredTools = [
 
 const benefits = [
   {
-    title: 'Zeit sparen',
-    description: 'Automatisiere wiederkehrende Aufgaben und konzentriere dich auf das, was dein Business wirklich voranbringt.',
+    title: 'Save Time',
+    description: 'Automate repetitive tasks and focus on the work that actually moves your business forward.',
     icon: '◷'
   },
   {
-    title: 'Produktivität steigern',
-    description: 'Nutze getestete AI-Tools und praxiserprobte Automatisierungssysteme für effizientere Workflows.',
+    title: 'Boost Productivity',
+    description: 'Use tested AI tools and practical automation systems to build faster workflows.',
     icon: 'ϟ'
   },
   {
-    title: 'Einkommen erhöhen',
-    description: 'Skaliere schneller, monetarisiere smarter und baue digitale Einkommensquellen systematisch auf.',
+    title: 'Increase Income',
+    description: 'Scale smarter, monetize faster and build digital income systems with clarity.',
     icon: '↗'
   },
   {
-    title: 'Immer einen Schritt voraus',
-    description: 'Entdecke neue AI-Lösungen frühzeitig und sichere dir echte Vorteile gegenüber dem Wettbewerb.',
+    title: 'Stay Ahead',
+    description: 'Discover new AI solutions early and gain a real edge before they become mainstream.',
     icon: '✦'
   }
 ];
 
-const categoryPills = ['Alle Tools', 'Produktivität', 'Content'];
+const categoryPills = ['All Tools', 'Productivity', 'Content'];
 
 const footerLinks = {
   navigation: [
     { label: 'Home', href: '#home' },
     { label: 'AI Tools', href: '#tools' },
-    { label: 'Vorteile', href: '#vorteile' },
-    { label: 'Kontakt', href: '/kontakt' }
+    { label: 'Benefits', href: '#benefits' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' }
   ],
-  kategorien: [
-    { label: 'Produktivität', href: '#tools' },
-    { label: 'Content-Erstellung', href: '#tools' },
+  categories: [
+    { label: 'Productivity', href: '#tools' },
+    { label: 'Content Creation', href: '#tools' },
     { label: 'Marketing & SEO', href: '#tools' },
     { label: 'Video & Audio', href: '#tools' },
     { label: 'Business & Automation', href: '#tools' }
   ],
-  rechtliches: [
-    { label: 'Impressum', href: '/impressum' },
-    { label: 'Datenschutz', href: '/datenschutz' },
+  legal: [
+    { label: 'Imprint', href: '/imprint' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Disclaimer', href: '/disclaimer' },
-    { label: 'Affiliate-Hinweis', href: '/affiliate-hinweis' },
-    { label: 'Nutzungsbedingungen', href: '/nutzungsbedingungen' }
+    { label: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
+    { label: 'Terms of Use', href: '/terms-of-use' }
   ]
 };
 
@@ -108,85 +109,94 @@ function PlayIcon() {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-aurion-bg text-white">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-aurion-radial" />
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.025)_1px,transparent_1px)] bg-[size:72px_72px] opacity-15" />
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-aurion-radial" />
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:72px_72px] opacity-20" />
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#060914]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-          <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures Home">
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-12 w-auto" />
+          <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures home">
+            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-10 w-auto sm:h-12" />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-white/82 md:flex">
             <a className="nav-link active" href="#home">Home</a>
             <a className="nav-link" href="#tools">AI Tools</a>
-            <a className="nav-link" href="#vorteile">Vorteile</a>
-            <a className="nav-link" href="#ueber-uns">Über uns</a>
-            <a className="nav-link" href="/kontakt">Kontakt</a>
+            <a className="nav-link" href="#benefits">Benefits</a>
+            <a className="nav-link" href="/blog">Blog</a>
+            <a className="nav-link" href="/contact">Contact</a>
           </nav>
 
           <a href="#tools" className="rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:scale-[1.02]">
-            Jetzt entdecken
+            Explore Tools
           </a>
         </div>
       </header>
 
-      <section id="home" className="relative border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-16 md:grid-cols-[.88fr_1.12fr] md:items-center lg:px-8 lg:pb-16 lg:pt-20">
-          <div className="relative z-10">
+      <section id="home" className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
+          <div className="absolute inset-y-10 right-0 w-full overflow-hidden rounded-l-[2.8rem] border border-white/10 shadow-card">
+            <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures hero background" className="h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,9,20,.82)_0%,rgba(6,9,20,.5)_18%,rgba(6,9,20,.12)_45%,rgba(6,9,20,.1)_100%)]" />
+          </div>
+        </div>
+        <div className="absolute right-[8%] top-[20%] hidden h-56 w-56 rounded-full bg-aurion-purple/20 blur-[110px] lg:block" />
+        <div className="absolute right-[18%] bottom-[12%] hidden h-48 w-48 rounded-full bg-aurion-blue/15 blur-[110px] lg:block" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-14 pt-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:pb-18 lg:pt-20">
+          <div className="relative z-10 max-w-2xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-aurion-cyan/35 bg-aurion-cyan/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-aurion-cyan">
               <span className="h-2 w-2 rounded-full bg-aurion-magenta shadow-[0_0_16px_rgba(193,46,255,.9)]" />
-              Die Zukunft gehört denen, die mit KI bauen
+              The future belongs to those who build with AI
             </div>
 
             <h1 className="max-w-3xl text-5xl font-black leading-[1.02] tracking-[-0.055em] md:text-6xl lg:text-7xl">
-              AI Tools. Automation.<br />
+              AI Tools.<br />
+              Automation.<br />
               <span className="bg-gradient-to-r from-aurion-magenta via-aurion-purple to-aurion-blue bg-clip-text text-transparent">
-                Wachstum ohne Grenzen.
+                Growth Without Limits.
               </span>
             </h1>
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-white/78">
-              Entdecke getestete AI-Tools, leistungsstarke Automatisierungslösungen und digitale Einkommenssysteme — kuratiert für Creator, Trader und Unternehmer, die schneller wachsen wollen.
+              Discover tested AI tools, powerful automation systems and digital income solutions curated for creators, traders and entrepreneurs who want to move faster.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="#tools" className="group inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-0.5">
-                <span>AI Tools entdecken</span>
+                <span>Explore AI Tools</span>
                 <ArrowIcon />
               </a>
-              <a href="#ueber-uns" className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/[.03] px-7 py-4 text-sm font-extrabold text-white transition hover:border-white/40 hover:bg-white/[.06]">
+              <a href="#about" className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/[.03] px-7 py-4 text-sm font-extrabold text-white transition hover:border-white/40 hover:bg-white/[.06]">
                 <PlayIcon />
-                <span>So funktioniert Aurion</span>
+                <span>See how Aurion works</span>
               </a>
             </div>
 
             <div className="mt-9">
-              <p className="mb-4 text-sm font-semibold text-white/75">Vertraut von Creatorn, Tradern & Unternehmern weltweit</p>
+              <p className="mb-4 text-sm font-semibold text-white/75">Trusted by creators, traders & entrepreneurs worldwide</p>
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map((n) => (
                     <img
                       key={n}
                       src={`/assets/avatar-${n}.png`}
-                      alt={`Aurion Community ${n}`}
-                      className="h-14 w-14 rounded-full border-2 border-aurion-bg object-cover shadow-[0_0_25px_rgba(45,148,255,.14)]"
+                      alt={`Aurion community member ${n}`}
+                      className="h-12 w-12 rounded-full border-2 border-aurion-bg object-cover shadow-[0_0_24px_rgba(45,148,255,.14)] sm:h-14 sm:w-14"
                     />
                   ))}
                 </div>
                 <div>
                   <div className="tracking-widest text-yellow-300">★★★★★</div>
-                  <p className="text-sm text-white/65">AI-Insights, Tools & Systeme für moderne digitale Brands</p>
+                  <p className="max-w-sm text-sm text-white/65">AI insights, tools & systems for modern digital brands.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-[2.6rem] bg-[radial-gradient(circle_at_60%_40%,rgba(193,46,255,.18),transparent_30%),radial-gradient(circle_at_30%_70%,rgba(45,148,255,.14),transparent_26%)] blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-[#090D1A] shadow-card">
+          <div className="relative min-h-[280px] lg:hidden">
+            <div className="absolute -inset-3 rounded-[2rem] bg-[radial-gradient(circle_at_60%_40%,rgba(193,46,255,.18),transparent_30%),radial-gradient(circle_at_30%_70%,rgba(45,148,255,.14),transparent_26%)] blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#090D1A] shadow-card">
               <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures Hero" className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,9,20,.12),rgba(6,9,20,0)_35%)]" />
             </div>
           </div>
         </div>
@@ -194,7 +204,7 @@ export default function Home() {
 
       <section className="border-b border-white/10 bg-[#050814]/65 py-8">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="mb-5 text-center text-xs font-bold uppercase tracking-[0.28em] text-white/50">Featured in & vertraut von</p>
+          <p className="mb-5 text-center text-xs font-bold uppercase tracking-[0.28em] text-white/50">Featured in & trusted by</p>
           <div className="grid grid-cols-2 gap-5 text-center text-xl font-black text-white/70 md:grid-cols-6">
             <span>Framer</span>
             <span>Synthesia</span>
@@ -206,16 +216,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="vorteile" className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
-        <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))] p-3 shadow-card backdrop-blur">
-          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <section id="benefits" className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,14,30,.96),rgba(7,11,24,.98))] p-4 shadow-card">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_8%_0%,rgba(193,46,255,.13),transparent_20%),radial-gradient(circle_at_95%_8%,rgba(45,148,255,.12),transparent_18%),linear-gradient(180deg,transparent,rgba(255,255,255,.02))]" />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {benefits.map((benefit) => (
-              <div key={benefit.title} className="rounded-[1.4rem] border border-white/8 bg-[#0B1022]/90 p-7 transition hover:border-white/15 hover:bg-[#0E1430]">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-aurion-purple to-aurion-blue text-2xl font-black shadow-glow">
+              <div
+                key={benefit.title}
+                className="group relative overflow-hidden rounded-[1.75rem] border border-white/12 bg-[linear-gradient(180deg,rgba(14,20,43,.96),rgba(8,12,27,.92))] p-7 transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_22px_70px_rgba(89,56,255,.18)]"
+              >
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-70" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-aurion-purple/12 blur-3xl transition duration-300 group-hover:bg-aurion-purple/18" />
+                <div className="pointer-events-none absolute -left-12 bottom-0 h-24 w-24 rounded-full bg-aurion-blue/10 blur-3xl" />
+                <div className="relative mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-aurion-purple/95 to-aurion-blue text-2xl font-black shadow-[0_10px_30px_rgba(89,56,255,.28)]">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-extrabold tracking-[-0.02em]">{benefit.title}</h3>
-                <p className="mt-3 leading-7 text-white/68">{benefit.description}</p>
+                <h3 className="relative text-[1.7rem] font-black leading-tight tracking-[-0.03em]">{benefit.title}</h3>
+                <p className="relative mt-4 text-[1.02rem] leading-8 text-white/72">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -226,9 +243,9 @@ export default function Home() {
         <div className="rounded-[2rem] border border-white/10 bg-[#0B1022]/78 p-6 shadow-card backdrop-blur md:p-8">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.24em] text-white/50">Handverlesen. Getestet. Empfohlen.</span>
-              <h2 className="mt-2 text-3xl font-black tracking-[-0.035em] md:text-4xl">Die besten AI Tools für deinen Erfolg</h2>
-              <p className="mt-2 text-white/64">Nur Tools, die wir selbst nutzen, testen und uneingeschränkt empfehlen.</p>
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-white/50">Hand-picked. Tested. Recommended.</span>
+              <h2 className="mt-2 text-3xl font-black tracking-[-0.035em] md:text-4xl">The Best AI Tools for Your Growth</h2>
+              <p className="mt-2 text-white/64">Only tools that we actively use, test and confidently recommend.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               {categoryPills.map((category, index) => (
@@ -252,7 +269,7 @@ export default function Home() {
                 <h3 className="text-xl font-extrabold">{tool.name}</h3>
                 <p className="mt-3 min-h-[96px] text-sm leading-6 text-white/62">{tool.description}</p>
                 <div className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-aurion-purple/20 to-aurion-blue/20 px-4 py-2 text-sm font-extrabold text-aurion-cyan">
-                  Mehr erfahren <ArrowIcon />
+                  Learn more <ArrowIcon />
                 </div>
               </a>
             ))}
@@ -260,20 +277,20 @@ export default function Home() {
 
           <div className="mt-8 flex justify-center">
             <a href="#" className="inline-flex items-center gap-3 rounded-xl border border-aurion-purple/40 bg-white/[.03] px-6 py-4 text-sm font-extrabold text-white transition hover:border-aurion-purple hover:bg-white/[.06]">
-              Alle Tools entdecken <ArrowIcon />
+              View all tools <ArrowIcon />
             </a>
           </div>
         </div>
       </section>
 
-      <section id="ueber-uns" className="mx-auto max-w-7xl px-5 pb-10 lg:px-8">
+      <section id="about" className="mx-auto max-w-7xl px-5 pb-10 lg:px-8">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(13,18,39,.98),rgba(14,17,32,.88))] p-8 shadow-card md:p-10">
           <div className="grid gap-8 md:grid-cols-[1fr_.85fr] md:items-center">
             <div>
-              <span className="mb-4 inline-flex rounded-full border border-white/18 bg-white/5 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-white/80">Wachse mit uns</span>
-              <h2 className="text-4xl font-black tracking-[-0.05em]">Tägliche AI-Insights & exklusive Tipps</h2>
+              <span className="mb-4 inline-flex rounded-full border border-white/18 bg-white/5 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-white/80">Grow with us</span>
+              <h2 className="text-4xl font-black tracking-[-0.05em]">Daily AI insights & exclusive tips</h2>
               <p className="mt-3 max-w-xl text-lg text-white/78">
-                Folge uns auf TikTok und bleibe bei Tools, Automatisierung und digitalem Wachstum immer einen Schritt voraus.
+                Follow us on TikTok and stay one step ahead with tools, automation and digital growth insights.
               </p>
             </div>
             <div className="flex justify-start md:justify-end">
@@ -284,7 +301,7 @@ export default function Home() {
                 className="inline-flex w-full max-w-md items-center justify-center gap-3 rounded-2xl bg-white px-6 py-5 text-center text-sm font-black uppercase tracking-[0.06em] text-[#10162E] transition hover:-translate-y-0.5"
               >
                 <span className="text-lg">♫</span>
-                Folge uns auf TikTok
+                Follow us on TikTok
                 <ArrowIcon />
               </a>
             </div>
@@ -295,22 +312,22 @@ export default function Home() {
       <footer className="border-t border-white/10 bg-[#050814] py-12">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.25fr_.8fr_.8fr_.8fr_.9fr] lg:px-8">
           <div>
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-14 w-auto" />
-            <p className="mt-5 max-w-sm leading-7 text-white/62">Dein Hub für die besten AI Tools, Automatisierungssysteme und digitale Einkommensmöglichkeiten.</p>
-            <p className="mt-8 text-sm text-white/42">© 2026 Aurion Futures. Alle Rechte vorbehalten.</p>
+            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-12 w-auto" />
+            <p className="mt-5 max-w-sm leading-7 text-white/62">Your hub for the best AI tools, automation systems and digital income opportunities.</p>
+            <p className="mt-8 text-sm text-white/42">© 2026 Aurion Futures. All rights reserved.</p>
           </div>
 
           <FooterColumn title="Navigation" links={footerLinks.navigation} />
-          <FooterColumn title="Kategorien" links={footerLinks.kategorien} />
-          <FooterColumn title="Rechtliches" links={footerLinks.rechtliches} />
+          <FooterColumn title="Categories" links={footerLinks.categories} />
+          <FooterColumn title="Legal" links={footerLinks.legal} />
 
           <div>
-            <h3 className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-white">Folge uns</h3>
+            <h3 className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-white">Follow us</h3>
             <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.04] p-4 transition hover:border-aurion-purple hover:bg-white/[.06]">
               <div className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/[.06] text-lg font-black">♫</div>
               <div>
                 <p className="text-sm font-extrabold">TikTok</p>
-                <p className="text-sm text-white/60">Tägliche Tipps, Tools & Insights rund um AI.</p>
+                <p className="text-sm text-white/60">Daily tips, tools & insights around AI.</p>
               </div>
             </a>
           </div>

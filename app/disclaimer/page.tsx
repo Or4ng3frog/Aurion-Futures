@@ -4,23 +4,23 @@ export default function Page() {
   return (
     <LegalPage
       title="Disclaimer"
-      intro="Aurion Futures stellt Informationen, Tools und Empfehlungen mit größter Sorgfalt bereit. Dennoch erfolgt die Nutzung sämtlicher Inhalte auf eigene Verantwortung."
+      intro="Aurion Futures provides information, tools and recommendations with great care. However, the use of all content is at your own responsibility."
     >
-      <h2>1. Inhalte dieser Website</h2>
+      <h2>1. Website content</h2>
       <p>
-        Die bereitgestellten Inhalte dienen ausschließlich Informations- und Marketingzwecken. Trotz sorgfältiger Erstellung übernehmen wir keine Gewähr für Richtigkeit, Vollständigkeit oder Aktualität.
+        The content provided is for informational and marketing purposes only. Despite careful preparation, we do not guarantee accuracy, completeness or timeliness.
       </p>
-      <h2>2. Keine Anlage- oder Rechtsberatung</h2>
+      <h2>2. No financial, legal or tax advice</h2>
       <p>
-        Inhalte zu AI-Tools, Business-Systemen, Trading oder digitalen Einkommensstrategien stellen keine individuelle Anlage-, Rechts- oder Steuerberatung dar. Bitte ziehe bei Bedarf qualifizierte Fachpersonen hinzu.
+        Content related to AI tools, business systems, trading or digital income strategies does not constitute individual financial, legal or tax advice. Please consult qualified professionals if needed.
       </p>
-      <h2>3. Externe Links</h2>
+      <h2>3. External links</h2>
       <p>
-        Für Inhalte externer Websites, auf die von Aurion Futures verlinkt wird, übernehmen wir keine Haftung. Für die Inhalte verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
+        We assume no liability for the content of external websites linked from Aurion Futures. The operators of those websites are solely responsible for their content.
       </p>
-      <h2>4. Haftung</h2>
+      <h2>4. Liability</h2>
       <p>
-        Eine Haftung für direkte oder indirekte Schäden, die durch die Nutzung dieser Website oder der bereitgestellten Informationen entstehen, ist — soweit gesetzlich zulässig — ausgeschlossen.
+        To the extent permitted by law, liability for direct or indirect damages arising from the use of this website or the information provided is excluded.
       </p>
     </LegalPage>
   );

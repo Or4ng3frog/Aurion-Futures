@@ -115,7 +115,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#060914]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures home">
-            <img src="/assets/aurion-futures-logo-clean.svg" alt="Aurion Futures" className="h-9 w-auto sm:h-10 md:h-11" />
+            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-12 w-auto md:h-14" />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-white/82 md:flex">
@@ -305,7 +305,7 @@ export default function Home() {
       <footer className="border-t border-white/10 bg-[#050814] py-12">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.25fr_.8fr_.8fr_.8fr_.9fr] lg:px-8">
           <div>
-            <img src="/assets/aurion-futures-logo-clean.svg" alt="Aurion Futures" className="h-11 w-auto" />
+            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-14 w-auto" />
             <p className="mt-5 max-w-sm leading-7 text-white/62">Your hub for the best AI tools, automation systems and digital income opportunities.</p>
             <p className="mt-8 text-sm text-white/42">© 2026 Aurion Futures. All rights reserved.</p>
           </div>

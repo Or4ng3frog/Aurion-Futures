@@ -6,10 +6,7 @@ export const metadata: Metadata = {
   description:
     'Aurion Futures curates AI tools, automation systems and digital income solutions for creators, traders and entrepreneurs.',
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
-    ],
+    icon: [{ url: '/favicon.ico' }],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }]
   },
   openGraph: {

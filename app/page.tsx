@@ -115,7 +115,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#060914]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures home">
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-10 w-auto sm:h-12" />
+            <img src="/assets/aurion-futures-logo-exact.png" alt="Aurion Futures" className="h-10 w-auto sm:h-12" />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-white/82 md:flex">
@@ -133,17 +133,9 @@ export default function Home() {
       </header>
 
       <section id="home" className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
-          <div className="absolute inset-y-10 right-0 w-full overflow-hidden rounded-l-[2.8rem] border border-white/10 shadow-card">
-            <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures hero background" className="h-full w-full object-cover object-center" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,9,20,.82)_0%,rgba(6,9,20,.5)_18%,rgba(6,9,20,.12)_45%,rgba(6,9,20,.1)_100%)]" />
-          </div>
-        </div>
-        <div className="absolute right-[8%] top-[20%] hidden h-56 w-56 rounded-full bg-aurion-purple/20 blur-[110px] lg:block" />
-        <div className="absolute right-[18%] bottom-[12%] hidden h-48 w-48 rounded-full bg-aurion-blue/15 blur-[110px] lg:block" />
-
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-14 pt-16 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:pb-18 lg:pt-20">
-          <div className="relative z-10 max-w-2xl">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(193,46,255,.12),transparent_26%),radial-gradient(circle_at_82%_20%,rgba(45,148,255,.1),transparent_24%)]" />
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-16 md:grid-cols-[.88fr_1.12fr] md:items-center lg:px-8 lg:pb-16 lg:pt-20">
+          <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-aurion-cyan/35 bg-aurion-cyan/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-aurion-cyan">
               <span className="h-2 w-2 rounded-full bg-aurion-magenta shadow-[0_0_16px_rgba(193,46,255,.9)]" />
               The future belongs to those who build with AI
@@ -193,10 +185,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative min-h-[280px] lg:hidden">
-            <div className="absolute -inset-3 rounded-[2rem] bg-[radial-gradient(circle_at_60%_40%,rgba(193,46,255,.18),transparent_30%),radial-gradient(circle_at_30%_70%,rgba(45,148,255,.14),transparent_26%)] blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#090D1A] shadow-card">
-              <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures Hero" className="h-full w-full object-cover" />
+          <div className="relative">
+            <div className="absolute -inset-5 rounded-[2.8rem] bg-[radial-gradient(circle_at_70%_35%,rgba(193,46,255,.2),transparent_28%),radial-gradient(circle_at_35%_75%,rgba(45,148,255,.16),transparent_24%)] blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2.3rem] border border-white/10 bg-[#090D1A] shadow-card">
+              <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures Hero" className="h-full min-h-[320px] w-full object-cover md:min-h-[420px]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,20,.08),rgba(6,9,20,.15))]" />
             </div>
           </div>
         </div>
@@ -312,7 +305,7 @@ export default function Home() {
       <footer className="border-t border-white/10 bg-[#050814] py-12">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.25fr_.8fr_.8fr_.8fr_.9fr] lg:px-8">
           <div>
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-12 w-auto" />
+            <img src="/assets/aurion-futures-logo-exact.png" alt="Aurion Futures" className="h-12 w-auto" />
             <p className="mt-5 max-w-sm leading-7 text-white/62">Your hub for the best AI tools, automation systems and digital income opportunities.</p>
             <p className="mt-8 text-sm text-white/42">© 2026 Aurion Futures. All rights reserved.</p>
           </div>

@@ -17,7 +17,11 @@ html {
 body {
   margin: 0;
   background: #060914;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .nav-link {
@@ -33,7 +37,7 @@ body {
 
 .nav-link.active::after,
 .nav-link:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -44,61 +48,34 @@ body {
   box-shadow: 0 0 18px rgba(139, 67, 255, 0.9);
 }
 
-.stars {
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 12% 18%, rgba(255,255,255,.7) 0 1px, transparent 1px),
-    radial-gradient(circle at 22% 34%, rgba(255,255,255,.55) 0 1px, transparent 1px),
-    radial-gradient(circle at 46% 15%, rgba(255,255,255,.55) 0 1px, transparent 1px),
-    radial-gradient(circle at 78% 20%, rgba(255,255,255,.75) 0 1px, transparent 1px),
-    radial-gradient(circle at 86% 42%, rgba(255,255,255,.52) 0 1px, transparent 1px),
-    radial-gradient(circle at 64% 61%, rgba(255,255,255,.38) 0 1px, transparent 1px);
-  opacity: .75;
+.legal-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at 30% 0%, rgba(139,67,255,.24), transparent 34%),
+    radial-gradient(circle at 75% 20%, rgba(45,148,255,.14), transparent 28%),
+    linear-gradient(180deg,#070A17 0%,#050711 100%);
 }
 
-.mountain-layer {
-  clip-path: polygon(0 100%, 8% 72%, 16% 81%, 25% 55%, 31% 65%, 41% 28%, 47% 52%, 55% 18%, 63% 60%, 70% 38%, 77% 74%, 85% 55%, 94% 78%, 100% 68%, 100% 100%);
-  background: linear-gradient(180deg, #273468 0%, #111735 48%, #060914 100%);
-  box-shadow: inset 0 16px 30px rgba(255,255,255,.04);
+.legal-card {
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(11,16,34,.78);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
 }
 
-.mountain-layer-secondary {
-  clip-path: polygon(0 100%, 8% 69%, 17% 81%, 27% 49%, 39% 90%, 52% 48%, 61% 84%, 71% 42%, 82% 82%, 90% 58%, 100% 88%, 100% 100%);
-  background: linear-gradient(180deg, #16234b 0%, #0b1028 65%, #050814 100%);
+.legal-copy p,
+.legal-copy li {
+  color: rgba(255,255,255,.78);
+  line-height: 1.9;
 }
 
-.aurion-triangle {
-  filter: drop-shadow(0 0 24px rgba(184, 41, 255, .85)) drop-shadow(0 0 45px rgba(45, 148, 255, .45));
+.legal-copy h2 {
+  margin-top: 2rem;
+  margin-bottom: .7rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
 }
 
-.aurion-triangle::before,
-.aurion-triangle::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  clip-path: polygon(50% 0, 100% 100%, 84% 100%, 50% 18%, 16% 100%, 0 100%);
-}
-
-.aurion-triangle::before {
-  background: linear-gradient(135deg, #c12eff, #37a8ff);
-}
-
-.aurion-triangle::after {
-  inset: 5px;
-  background: #121633;
-  clip-path: polygon(50% 0, 100% 100%, 86% 100%, 50% 25%, 14% 100%, 0 100%);
-}
-
-.aurion-triangle.small {
-  opacity: .82;
-  filter: drop-shadow(0 0 20px rgba(184, 41, 255, .7));
-}
-
-@media (max-width: 768px) {
-  .aurion-triangle {
-    width: 58%;
-    height: 42%;
-    left: 52%;
-  }
+.legal-copy ul {
+  padding-left: 1.25rem;
 }

@@ -1,13 +1,13 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="g" x1="38" y1="22" x2="226" y2="228" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#D93FFF"/>
-      <stop offset="48%" stop-color="#8649FF"/>
-      <stop offset="100%" stop-color="#2495FF"/>
-    </linearGradient>
-  </defs>
-  <path d="M26 226L106 26H136L57 226H26Z" fill="url(#g)"/>
-  <path d="M121 129H198L213 164H136L121 129Z" fill="url(#g)"/>
-  <path d="M138 179H226L244 226H157L138 179Z" fill="url(#g)"/>
-  <path d="M136 26L211 119H164L112 53H128L136 26Z" fill="url(#g)"/>
+<defs>
+  <linearGradient id="g" x1="28" y1="25" x2="220" y2="224" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#D542FF"/>
+    <stop offset="55%" stop-color="#7B45FF"/>
+    <stop offset="100%" stop-color="#2396FF"/>
+  </linearGradient>
+</defs>
+<path d="M29 222L112 34H147L68 222H29Z" fill="url(#g)"/>
+<path d="M109 145H184L204 180H129L109 145Z" fill="url(#g)"/>
+<path d="M131 192H212L232 222H151L131 192Z" fill="url(#g)"/>
+<path d="M149 34L229 222H189L119 72H143L149 34Z" fill="url(#g)"/>
 </svg>

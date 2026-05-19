@@ -7,8 +7,11 @@ export const metadata: Metadata = {
     'Aurion Futures curates AI tools, automation systems and digital income solutions for creators, traders and entrepreneurs.',
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/assets/aurion-favicon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/assets/aurion-favicon-16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/assets/aurion-favicon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/assets/aurion-favicon-512.png', type: 'image/png', sizes: '512x512' }
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }]
   },

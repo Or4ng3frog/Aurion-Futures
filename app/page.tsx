@@ -252,9 +252,9 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures home">
             <img
-              src="/assets/aurion-futures-logo.svg"
+              src="/assets/aurion-futures-logo.png"
               alt="Aurion Futures"
-              className="h-12 w-auto md:h-14"
+              className="h-10 w-auto md:h-12"
             />
           </a>
 
@@ -489,9 +489,9 @@ export default function Home() {
             {/* Brand column */}
             <div>
               <img
-                src="/assets/aurion-futures-logo.svg"
+                src="/assets/aurion-futures-logo.png"
                 alt="Aurion Futures"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
               <p className="mt-5 max-w-sm leading-7 text-white/62">
                 Your hub for the best AI tools, automation systems and digital income opportunities.

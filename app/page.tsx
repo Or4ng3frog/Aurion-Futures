@@ -68,28 +68,28 @@ const benefits: Benefit[] = [
     title: 'Save Time',
     description:
       'Automate repetitive tasks and focus on the work that actually moves your business forward.',
-    image: '/assets/benefit-save-time-clean.png',
+    image: '/assets/benefit-save-time-final.png',
     Icon: ClockIcon
   },
   {
     title: 'Boost Productivity',
     description:
       'Use tested AI tools and practical automation systems to build faster workflows.',
-    image: '/assets/benefit-productivity-clean.png',
+    image: '/assets/benefit-productivity-final.png',
     Icon: BoltIcon
   },
   {
     title: 'Increase Income',
     description:
       'Scale smarter, monetize faster and build digital income systems with clarity.',
-    image: '/assets/benefit-income-clean.png',
+    image: '/assets/benefit-income-final.png',
     Icon: TrendingUpIcon
   },
   {
     title: 'Stay Ahead',
     description:
       'Discover new AI solutions early and gain a real edge before they become mainstream.',
-    image: '/assets/benefit-ahead-clean.png',
+    image: '/assets/benefit-ahead-final.png',
     Icon: SparkleIcon
   }
 ];
@@ -468,22 +468,22 @@ export default function Home() {
                 Follow us on TikTok and stay one step ahead with tools, automation and digital growth insights.
               </p>
             </div>
-            <div className="relative min-h-[290px]">
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:justify-end">
-                <div className="absolute right-4 top-1/2 hidden h-44 w-44 -translate-y-1/2 rounded-full bg-aurion-purple/18 blur-3xl md:block" />
-                <div className="absolute right-16 top-1/2 hidden h-32 w-32 -translate-y-1/2 rounded-full bg-aurion-blue/15 blur-3xl md:block" />
+            <div className="relative min-h-[315px] overflow-visible">
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:translate-x-8 md:justify-end">
+                <div className="absolute right-16 top-1/2 hidden h-52 w-52 -translate-y-1/2 rounded-full bg-aurion-purple/18 blur-3xl md:block" />
+                <div className="absolute right-4 top-1/2 hidden h-40 w-40 -translate-y-1/2 rounded-full bg-aurion-blue/16 blur-3xl md:block" />
                 <img
-                  src="/assets/cta-tiktok-clean.png"
+                  src="/assets/cta-tiktok-final.png"
                   alt="AI TikTok content visual"
-                  className="w-full max-w-[540px] object-contain opacity-95 drop-shadow-[0_28px_80px_rgba(82,57,255,.28)]"
+                  className="w-full max-w-[590px] object-contain opacity-95 drop-shadow-[0_30px_90px_rgba(82,57,255,.32)]"
                 />
               </div>
-              <div className="relative z-10 flex h-full items-center justify-center md:justify-end">
+              <div className="relative z-10 flex h-full items-start justify-center pt-5 md:justify-start md:pl-6 md:pt-10 lg:justify-center lg:pl-0">
                 <a
                   href="https://www.tiktok.com/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex w-full max-w-md items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white px-6 py-5 text-center text-sm font-black uppercase tracking-[0.06em] text-[#10162E] shadow-[0_14px_40px_rgba(0,0,0,.28)] transition hover:-translate-y-0.5"
+                  className="inline-flex w-full max-w-[390px] items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white px-6 py-5 text-center text-sm font-black uppercase tracking-[0.06em] text-[#10162E] shadow-[0_16px_44px_rgba(0,0,0,.32)] transition hover:-translate-y-0.5"
                 >
                   <TikTokIcon />
                   Follow us on TikTok
@@ -559,31 +559,39 @@ export default function Home() {
 /* -------------------------------------------------------------------------- */
 
 function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
-  return (
-    <div className="group relative overflow-hidden rounded-[1.65rem]">
-      <div className="absolute inset-0 rounded-[1.65rem] bg-[linear-gradient(145deg,rgba(213,66,255,.38),rgba(35,150,255,.22)_50%,rgba(255,255,255,.05)_82%)] opacity-80 transition duration-300 group-hover:opacity-100" />
-      <div className="relative m-px rounded-[calc(1.65rem-1px)] bg-[linear-gradient(180deg,rgba(11,16,34,.98),rgba(8,12,26,.97))] p-6 md:p-7">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-        <div className="pointer-events-none absolute -left-8 top-8 h-24 w-24 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/20" />
-        <div className="pointer-events-none absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-aurion-blue/10 blur-3xl transition duration-300 group-hover:bg-aurion-blue/20" />
+  const assetSize = [
+    'w-[94%] max-w-[250px] -translate-y-1',
+    'w-[90%] max-w-[255px] scale-[.94]',
+    'w-[84%] max-w-[235px] translate-y-2',
+    'w-[92%] max-w-[250px] scale-[1.02]'
+  ][index] ?? 'w-[90%] max-w-[245px]';
 
-        <span className="absolute right-5 top-5 text-xs font-black tracking-widest text-white/25">
+  return (
+    <div className="group relative overflow-hidden rounded-[1.65rem] transition duration-300 hover:-translate-y-1">
+      <div className="absolute inset-0 rounded-[1.65rem] bg-[linear-gradient(145deg,rgba(213,66,255,.36),rgba(35,150,255,.20)_50%,rgba(255,255,255,.045)_82%)] opacity-75 transition duration-300 group-hover:opacity-100" />
+      <div className="relative m-px min-h-[470px] rounded-[calc(1.65rem-1px)] bg-[linear-gradient(180deg,rgba(11,16,34,.98),rgba(8,12,26,.97))] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,.05)]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/24 to-transparent" />
+        <div className="pointer-events-none absolute -left-10 top-10 h-28 w-28 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/18" />
+        <div className="pointer-events-none absolute -right-12 bottom-10 h-32 w-32 rounded-full bg-aurion-blue/10 blur-3xl transition duration-300 group-hover:bg-aurion-blue/18" />
+
+        <span className="absolute right-5 top-4 text-[0.62rem] font-black tracking-[0.24em] text-white/14">
           0{index + 1}
         </span>
 
-        <div className="relative mb-6 h-[170px] overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_35%,rgba(167,73,255,.16),transparent_58%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(89,56,255,.12),transparent_62%)] blur-2xl" />
+        <div className="relative mb-8 flex h-[190px] items-center justify-center">
+          <div className="absolute inset-x-6 bottom-5 h-20 rounded-full bg-aurion-purple/10 blur-3xl transition duration-500 group-hover:bg-aurion-purple/16" />
+          <div className="absolute inset-x-8 top-8 h-16 rounded-full bg-aurion-blue/10 blur-3xl transition duration-500 group-hover:bg-aurion-blue/16" />
           <img
             src={benefit.image}
             alt={benefit.title}
-            className="relative z-10 h-full w-full object-contain p-3 drop-shadow-[0_18px_40px_rgba(77,58,255,.22)] transition duration-500 group-hover:scale-[1.03]"
+            className={`relative z-10 object-contain drop-shadow-[0_22px_50px_rgba(77,58,255,.28)] transition duration-500 group-hover:scale-[1.035] ${assetSize}`}
           />
         </div>
 
         <h3 className="text-xl font-black leading-tight tracking-[-0.02em] md:text-[1.35rem]">
           {benefit.title}
         </h3>
-        <p className="mt-3 text-[0.95rem] leading-7 text-white/65">
+        <p className="mt-4 text-[0.95rem] leading-7 text-white/65">
           {benefit.description}
         </p>
       </div>

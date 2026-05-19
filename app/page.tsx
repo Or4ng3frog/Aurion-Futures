@@ -68,28 +68,28 @@ const benefits: Benefit[] = [
     title: 'Save Time',
     description:
       'Automate repetitive tasks and focus on the work that actually moves your business forward.',
-    image: '/assets/benefit-save-time.png',
+    image: '/assets/benefit-save-time-clean.png',
     Icon: ClockIcon
   },
   {
     title: 'Boost Productivity',
     description:
       'Use tested AI tools and practical automation systems to build faster workflows.',
-    image: '/assets/benefit-productivity.png',
+    image: '/assets/benefit-productivity-clean.png',
     Icon: BoltIcon
   },
   {
     title: 'Increase Income',
     description:
       'Scale smarter, monetize faster and build digital income systems with clarity.',
-    image: '/assets/benefit-income.png',
+    image: '/assets/benefit-income-clean.png',
     Icon: TrendingUpIcon
   },
   {
     title: 'Stay Ahead',
     description:
       'Discover new AI solutions early and gain a real edge before they become mainstream.',
-    image: '/assets/benefit-ahead.png',
+    image: '/assets/benefit-ahead-clean.png',
     Icon: SparkleIcon
   }
 ];
@@ -468,15 +468,17 @@ export default function Home() {
                 Follow us on TikTok and stay one step ahead with tools, automation and digital growth insights.
               </p>
             </div>
-            <div className="relative flex min-h-[250px] items-center justify-start md:justify-end">
-              <div className="absolute inset-y-0 right-0 hidden w-full max-w-[420px] items-center justify-end md:flex">
+            <div className="relative min-h-[290px]">
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:justify-end">
+                <div className="absolute right-4 top-1/2 hidden h-44 w-44 -translate-y-1/2 rounded-full bg-aurion-purple/18 blur-3xl md:block" />
+                <div className="absolute right-16 top-1/2 hidden h-32 w-32 -translate-y-1/2 rounded-full bg-aurion-blue/15 blur-3xl md:block" />
                 <img
-                  src="/assets/cta-tiktok-ai.png"
-                  alt="AI social content visual"
-                  className="pointer-events-none w-full max-w-[400px] object-contain opacity-95 drop-shadow-[0_24px_80px_rgba(89,56,255,.35)]"
+                  src="/assets/cta-tiktok-clean.png"
+                  alt="AI TikTok content visual"
+                  className="w-full max-w-[540px] object-contain opacity-95 drop-shadow-[0_28px_80px_rgba(82,57,255,.28)]"
                 />
               </div>
-              <div className="relative z-10 flex w-full justify-start md:justify-end">
+              <div className="relative z-10 flex h-full items-center justify-center md:justify-end">
                 <a
                   href="https://www.tiktok.com/"
                   target="_blank"
@@ -557,34 +559,25 @@ export default function Home() {
 /* -------------------------------------------------------------------------- */
 
 function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
-  const { Icon } = benefit;
   return (
-    <div className="group relative overflow-hidden rounded-2xl">
-      <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(140deg,rgba(213,66,255,.45),rgba(35,150,255,.25)_45%,rgba(255,255,255,.06)_70%)] opacity-80 transition duration-300 group-hover:opacity-100" />
-      <div className="relative m-px rounded-[15px] bg-[linear-gradient(180deg,rgba(14,20,43,.95),rgba(9,13,28,.95))] p-7">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-        <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/20" />
+    <div className="group relative overflow-hidden rounded-[1.65rem]">
+      <div className="absolute inset-0 rounded-[1.65rem] bg-[linear-gradient(145deg,rgba(213,66,255,.38),rgba(35,150,255,.22)_50%,rgba(255,255,255,.05)_82%)] opacity-80 transition duration-300 group-hover:opacity-100" />
+      <div className="relative m-px rounded-[calc(1.65rem-1px)] bg-[linear-gradient(180deg,rgba(11,16,34,.98),rgba(8,12,26,.97))] p-6 md:p-7">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="pointer-events-none absolute -left-8 top-8 h-24 w-24 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/20" />
+        <div className="pointer-events-none absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-aurion-blue/10 blur-3xl transition duration-300 group-hover:bg-aurion-blue/20" />
 
         <span className="absolute right-5 top-5 text-xs font-black tracking-widest text-white/25">
           0{index + 1}
         </span>
 
-        <div className="mb-6 flex items-start justify-between gap-4">
-          <div className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-aurion-purple to-aurion-blue text-white shadow-[0_12px_32px_rgba(123,69,255,.35)]">
-            <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/25 to-transparent opacity-50" />
-            <span className="relative">
-              <Icon />
-            </span>
-          </div>
-
-          <div className="relative h-[92px] w-[132px] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_30%_30%,rgba(193,46,255,.12),transparent_34%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))] shadow-[0_14px_40px_rgba(0,0,0,.25)]">
-            <img
-              src={benefit.image}
-              alt={benefit.title}
-              className="h-full w-full object-cover object-center opacity-95 transition duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(6,9,20,0)_25%,rgba(6,9,20,.12)_100%)]" />
-          </div>
+        <div className="relative mb-6 h-[170px] overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_35%,rgba(167,73,255,.16),transparent_58%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(89,56,255,.12),transparent_62%)] blur-2xl" />
+          <img
+            src={benefit.image}
+            alt={benefit.title}
+            className="relative z-10 h-full w-full object-contain p-3 drop-shadow-[0_18px_40px_rgba(77,58,255,.22)] transition duration-500 group-hover:scale-[1.03]"
+          />
         </div>
 
         <h3 className="text-xl font-black leading-tight tracking-[-0.02em] md:text-[1.35rem]">

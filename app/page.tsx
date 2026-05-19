@@ -1,4 +1,19 @@
-const featuredTools = [
+import type { ReactNode } from 'react';
+
+/* -------------------------------------------------------------------------- */
+/*                                    DATA                                    */
+/* -------------------------------------------------------------------------- */
+
+type Tool = {
+  name: string;
+  category: string;
+  description: string;
+  icon: string;
+  href: string;
+  accent: string;
+};
+
+const featuredTools: Tool[] = [
   {
     name: 'Framer',
     category: 'Website',
@@ -41,26 +56,36 @@ const featuredTools = [
   }
 ];
 
-const benefits = [
+type Benefit = {
+  title: string;
+  description: string;
+  Icon: () => ReactNode;
+};
+
+const benefits: Benefit[] = [
   {
     title: 'Save Time',
-    description: 'Automate repetitive tasks and focus on the work that actually moves your business forward.',
-    icon: '◷'
+    description:
+      'Automate repetitive tasks and focus on the work that actually moves your business forward.',
+    Icon: ClockIcon
   },
   {
     title: 'Boost Productivity',
-    description: 'Use tested AI tools and practical automation systems to build faster workflows.',
-    icon: 'ϟ'
+    description:
+      'Use tested AI tools and practical automation systems to build faster workflows.',
+    Icon: BoltIcon
   },
   {
     title: 'Increase Income',
-    description: 'Scale smarter, monetize faster and build digital income systems with clarity.',
-    icon: '↗'
+    description:
+      'Scale smarter, monetize faster and build digital income systems with clarity.',
+    Icon: TrendingUpIcon
   },
   {
     title: 'Stay Ahead',
-    description: 'Discover new AI solutions early and gain a real edge before they become mainstream.',
-    icon: '✦'
+    description:
+      'Discover new AI solutions early and gain a real edge before they become mainstream.',
+    Icon: SparkleIcon
   }
 ];
 
@@ -90,10 +115,21 @@ const footerLinks = {
   ]
 };
 
+/* -------------------------------------------------------------------------- */
+/*                                   ICONS                                    */
+/* -------------------------------------------------------------------------- */
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
-      <path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M5 12h13M13 6l6 6-6 6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -106,16 +142,120 @@ function PlayIcon() {
   );
 }
 
+function ClockIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7">
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M12 7v5l3.5 2.2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BoltIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7">
+      <path
+        d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function TrendingUpIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7">
+      <path
+        d="m3 17 6-6 4 4 8-8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14 7h7v7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function SparkleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7">
+      <path
+        d="M12 3 13.8 9.2 20 11l-6.2 1.8L12 19l-1.8-6.2L4 11l6.2-1.8L12 3Z"
+        fill="currentColor"
+      />
+      <path
+        d="M19 3.5 19.7 5.7 22 6.5l-2.3.8L19 9.5 18.3 7.3 16 6.5l2.3-.8L19 3.5Z"
+        fill="currentColor"
+        opacity=".7"
+      />
+    </svg>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5">
+      <path
+        d="m12 2.5 2.9 6.3 6.9.7-5.1 4.7 1.5 6.8L12 17.5l-6.2 3.5 1.5-6.8L2.2 9.5l6.9-.7L12 2.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function TikTokIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+      <path
+        d="M16.5 2c.2 1.7 1 3.2 2.4 4.1 1 .7 2.2 1 3.1 1v3.6c-1.4 0-2.9-.4-4.2-1.1-.6-.3-1.1-.7-1.6-1.1v7.4c0 4-3.3 7.1-7.1 7.1S2 19.9 2 16s3.3-7.1 7.1-7.1c.4 0 .9 0 1.3.1v3.7c-.4-.1-.9-.2-1.3-.2-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5V2h3.9Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   PAGE                                     */
+/* -------------------------------------------------------------------------- */
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-aurion-bg text-white">
       <div className="pointer-events-none fixed inset-0 -z-20 bg-aurion-radial" />
       <div className="pointer-events-none fixed inset-0 -z-20 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:72px_72px] opacity-20" />
 
+      {/* ---------------------------- HEADER ---------------------------- */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#060914]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#home" className="flex items-center gap-3" aria-label="Aurion Futures home">
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-12 w-auto md:h-14" />
+            <img
+              src="/assets/aurion-futures-logo.svg"
+              alt="Aurion Futures"
+              className="h-12 w-auto md:h-14"
+            />
           </a>
 
           <nav className="hidden items-center gap-8 text-sm font-semibold text-white/82 md:flex">
@@ -126,12 +266,16 @@ export default function Home() {
             <a className="nav-link" href="/contact">Contact</a>
           </nav>
 
-          <a href="#tools" className="rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:scale-[1.02]">
+          <a
+            href="#tools"
+            className="rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-5 py-3 text-sm font-extrabold text-white shadow-glow transition hover:scale-[1.02]"
+          >
             Explore Tools
           </a>
         </div>
       </header>
 
+      {/* ----------------------------- HERO ----------------------------- */}
       <section id="home" className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(193,46,255,.12),transparent_26%),radial-gradient(circle_at_82%_20%,rgba(45,148,255,.1),transparent_24%)]" />
         <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-16 md:grid-cols-[.88fr_1.12fr] md:items-center lg:px-8 lg:pb-16 lg:pt-20">
@@ -154,18 +298,26 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#tools" className="group inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-0.5">
+              <a
+                href="#tools"
+                className="group inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-aurion-purple to-aurion-blue px-7 py-4 text-sm font-extrabold text-white shadow-glow transition hover:-translate-y-0.5"
+              >
                 <span>Explore AI Tools</span>
                 <ArrowIcon />
               </a>
-              <a href="#about" className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/[.03] px-7 py-4 text-sm font-extrabold text-white transition hover:border-white/40 hover:bg-white/[.06]">
+              <a
+                href="#about"
+                className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/[.03] px-7 py-4 text-sm font-extrabold text-white transition hover:border-white/40 hover:bg-white/[.06]"
+              >
                 <PlayIcon />
                 <span>See how Aurion works</span>
               </a>
             </div>
 
             <div className="mt-9">
-              <p className="mb-4 text-sm font-semibold text-white/75">Trusted by creators, traders & entrepreneurs worldwide</p>
+              <p className="mb-4 text-sm font-semibold text-white/75">
+                Trusted by creators, traders &amp; entrepreneurs worldwide
+              </p>
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map((n) => (
@@ -178,8 +330,14 @@ export default function Home() {
                   ))}
                 </div>
                 <div>
-                  <div className="tracking-widest text-yellow-300">★★★★★</div>
-                  <p className="max-w-sm text-sm text-white/65">AI insights, tools & systems for modern digital brands.</p>
+                  <div className="flex items-center gap-0.5 text-yellow-300">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <StarIcon key={i} />
+                    ))}
+                  </div>
+                  <p className="max-w-sm text-sm text-white/65">
+                    AI insights, tools &amp; systems for modern digital brands.
+                  </p>
                 </div>
               </div>
             </div>
@@ -188,16 +346,23 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-5 rounded-[2.8rem] bg-[radial-gradient(circle_at_70%_35%,rgba(193,46,255,.2),transparent_28%),radial-gradient(circle_at_35%_75%,rgba(45,148,255,.16),transparent_24%)] blur-2xl" />
             <div className="relative overflow-hidden rounded-[2.3rem] border border-white/10 bg-[#090D1A] shadow-card">
-              <img src="/assets/hero-aurion-futures.png" alt="Aurion Futures Hero" className="h-full min-h-[320px] w-full object-cover md:min-h-[420px]" />
+              <img
+                src="/assets/hero-aurion-futures.png"
+                alt="Aurion Futures Hero"
+                className="h-full min-h-[320px] w-full object-cover md:min-h-[420px]"
+              />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,20,.08),rgba(6,9,20,.15))]" />
             </div>
           </div>
         </div>
       </section>
 
+      {/* ------------------------ TRUST / LOGO STRIP -------------------- */}
       <section className="border-b border-white/10 bg-[#050814]/65 py-8">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <p className="mb-5 text-center text-xs font-bold uppercase tracking-[0.28em] text-white/50">Featured in & trusted by</p>
+          <p className="mb-5 text-center text-xs font-bold uppercase tracking-[0.28em] text-white/50">
+            Featured in &amp; trusted by
+          </p>
           <div className="grid grid-cols-2 gap-5 text-center text-xl font-black text-white/70 md:grid-cols-6">
             <span>Framer</span>
             <span>Synthesia</span>
@@ -209,79 +374,91 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="benefits" className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,14,30,.96),rgba(7,11,24,.98))] p-4 shadow-card">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_8%_0%,rgba(193,46,255,.13),transparent_20%),radial-gradient(circle_at_95%_8%,rgba(45,148,255,.12),transparent_18%),linear-gradient(180deg,transparent,rgba(255,255,255,.02))]" />
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="group relative overflow-hidden rounded-[1.75rem] border border-white/12 bg-[linear-gradient(180deg,rgba(14,20,43,.96),rgba(8,12,27,.92))] p-7 transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_22px_70px_rgba(89,56,255,.18)]"
-              >
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-70" />
-                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-aurion-purple/12 blur-3xl transition duration-300 group-hover:bg-aurion-purple/18" />
-                <div className="pointer-events-none absolute -left-12 bottom-0 h-24 w-24 rounded-full bg-aurion-blue/10 blur-3xl" />
-                <div className="relative mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-aurion-purple/95 to-aurion-blue text-2xl font-black shadow-[0_10px_30px_rgba(89,56,255,.28)]">
-                  {benefit.icon}
-                </div>
-                <h3 className="relative text-[1.7rem] font-black leading-tight tracking-[-0.03em]">{benefit.title}</h3>
-                <p className="relative mt-4 text-[1.02rem] leading-8 text-white/72">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* ---------------------------- BENEFITS -------------------------- */}
+      <section id="benefits" className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="mb-10 max-w-2xl">
+          <span className="text-xs font-bold uppercase tracking-[0.24em] text-aurion-cyan/80">
+            Why Aurion
+          </span>
+          <h2 className="mt-3 text-3xl font-black tracking-[-0.035em] md:text-4xl">
+            Built for people who refuse to waste time.
+          </h2>
+          <p className="mt-3 text-white/64">
+            Four reasons creators, traders and entrepreneurs make Aurion part of their stack.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {benefits.map((benefit, idx) => (
+            <BenefitCard key={benefit.title} benefit={benefit} index={idx} />
+          ))}
         </div>
       </section>
 
-      <section id="tools" className="mx-auto max-w-7xl px-5 pb-8 lg:px-8">
-        <div className="rounded-[2rem] border border-white/10 bg-[#0B1022]/78 p-6 shadow-card backdrop-blur md:p-8">
-          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+      {/* ----------------------------- TOOLS ---------------------------- */}
+      <section id="tools" className="mx-auto max-w-7xl px-5 pb-16 lg:px-8 lg:pb-20">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(11,16,34,.86),rgba(8,12,27,.94))] p-6 shadow-card backdrop-blur md:p-10">
+          {/* subtle decorative gradient orbs */}
+          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-aurion-purple/12 blur-[100px]" />
+          <div className="pointer-events-none absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-aurion-blue/10 blur-[120px]" />
+
+          <div className="relative mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.24em] text-white/50">Hand-picked. Tested. Recommended.</span>
-              <h2 className="mt-2 text-3xl font-black tracking-[-0.035em] md:text-4xl">The Best AI Tools for Your Growth</h2>
-              <p className="mt-2 text-white/64">Only tools that we actively use, test and confidently recommend.</p>
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-aurion-cyan/80">
+                Hand-picked. Tested. Recommended.
+              </span>
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.035em] md:text-4xl">
+                The Best AI Tools for Your Growth
+              </h2>
+              <p className="mt-3 max-w-xl text-white/64">
+                Only tools that we actively use, test and confidently recommend.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {categoryPills.map((category, index) => (
-                <span
+                <button
                   key={category}
-                  className={`inline-flex items-center rounded-xl border px-5 py-3 text-sm font-bold ${index === 0 ? 'border-aurion-purple bg-gradient-to-r from-aurion-purple to-aurion-blue text-white' : 'border-white/10 bg-white/[.03] text-white/82'}`}
+                  type="button"
+                  className={
+                    index === 0
+                      ? 'rounded-full border border-aurion-purple/60 bg-gradient-to-r from-aurion-purple to-aurion-blue px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_28px_rgba(123,69,255,.35)]'
+                      : 'rounded-full border border-white/10 bg-white/[.04] px-5 py-2.5 text-sm font-bold text-white/75 transition hover:border-white/20 hover:bg-white/[.07] hover:text-white'
+                  }
                 >
                   {category}
-                </span>
+                </button>
               ))}
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-5">
+          <div className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {featuredTools.map((tool) => (
-              <a key={tool.name} href={tool.href} className="group rounded-[1.5rem] border border-white/10 bg-[#090E1E] p-6 transition hover:-translate-y-1 hover:border-aurion-purple/70 hover:bg-[#0D1328] hover:shadow-glow">
-                <div className={`mb-5 grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br ${tool.accent} text-2xl font-black text-[#07101D] shadow-[0_20px_60px_rgba(0,0,0,.25)]`}>
-                  {tool.icon}
-                </div>
-                <p className="mb-2 text-xs font-black uppercase tracking-[0.2em] text-aurion-cyan/80">{tool.category}</p>
-                <h3 className="text-xl font-extrabold">{tool.name}</h3>
-                <p className="mt-3 min-h-[96px] text-sm leading-6 text-white/62">{tool.description}</p>
-                <div className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-aurion-purple/20 to-aurion-blue/20 px-4 py-2 text-sm font-extrabold text-aurion-cyan">
-                  Learn more <ArrowIcon />
-                </div>
-              </a>
+              <ToolCard key={tool.name} tool={tool} />
             ))}
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <a href="#" className="inline-flex items-center gap-3 rounded-xl border border-aurion-purple/40 bg-white/[.03] px-6 py-4 text-sm font-extrabold text-white transition hover:border-aurion-purple hover:bg-white/[.06]">
+          <div className="relative mt-10 flex justify-center">
+            <a
+              href="#"
+              className="inline-flex items-center gap-3 rounded-xl border border-white/15 bg-white/[.04] px-6 py-3.5 text-sm font-bold text-white transition hover:border-aurion-purple/60 hover:bg-white/[.07]"
+            >
               View all tools <ArrowIcon />
             </a>
           </div>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-5 pb-10 lg:px-8">
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(13,18,39,.98),rgba(14,17,32,.88))] p-8 shadow-card md:p-10">
+      {/* ------------------------------ ABOUT --------------------------- */}
+      <section id="about" className="mx-auto max-w-7xl px-5 pb-16 lg:px-8 lg:pb-20">
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(13,18,39,.98),rgba(14,17,32,.88))] p-8 shadow-card md:p-12">
           <div className="grid gap-8 md:grid-cols-[1fr_.85fr] md:items-center">
             <div>
-              <span className="mb-4 inline-flex rounded-full border border-white/18 bg-white/5 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-white/80">Grow with us</span>
-              <h2 className="text-4xl font-black tracking-[-0.05em]">Daily AI insights & exclusive tips</h2>
+              <span className="mb-4 inline-flex rounded-full border border-white/18 bg-white/5 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-white/80">
+                Grow with us
+              </span>
+              <h2 className="text-4xl font-black tracking-[-0.05em]">
+                Daily AI insights &amp; exclusive tips
+              </h2>
               <p className="mt-3 max-w-xl text-lg text-white/78">
                 Follow us on TikTok and stay one step ahead with tools, automation and digital growth insights.
               </p>
@@ -293,7 +470,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="inline-flex w-full max-w-md items-center justify-center gap-3 rounded-2xl bg-white px-6 py-5 text-center text-sm font-black uppercase tracking-[0.06em] text-[#10162E] transition hover:-translate-y-0.5"
               >
-                <span className="text-lg">♫</span>
+                <TikTokIcon />
                 Follow us on TikTok
                 <ArrowIcon />
               </a>
@@ -302,27 +479,58 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#050814] py-12">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.25fr_.8fr_.8fr_.8fr_.9fr] lg:px-8">
-          <div>
-            <img src="/assets/aurion-futures-logo.svg" alt="Aurion Futures" className="h-14 w-auto" />
-            <p className="mt-5 max-w-sm leading-7 text-white/62">Your hub for the best AI tools, automation systems and digital income opportunities.</p>
-            <p className="mt-8 text-sm text-white/42">© 2026 Aurion Futures. All rights reserved.</p>
+      {/* ----------------------------- FOOTER --------------------------- */}
+      <footer className="relative border-t border-white/10 bg-[#040712]">
+        {/* gradient hairline on top of footer */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-aurion-purple/60 to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+          <div className="grid gap-12 lg:grid-cols-[1.4fr_.8fr_.8fr_.8fr]">
+            {/* Brand column */}
+            <div>
+              <img
+                src="/assets/aurion-futures-logo.svg"
+                alt="Aurion Futures"
+                className="h-12 w-auto"
+              />
+              <p className="mt-5 max-w-sm leading-7 text-white/62">
+                Your hub for the best AI tools, automation systems and digital income opportunities.
+              </p>
+
+              <div className="mt-7">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-white/45">
+                  Follow us
+                </p>
+                <a
+                  href="https://www.tiktok.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.03] px-4 py-3 transition hover:border-aurion-purple/50 hover:bg-white/[.06]"
+                >
+                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-aurion-purple to-aurion-blue text-white">
+                    <TikTokIcon />
+                  </span>
+                  <span className="text-sm font-bold text-white">TikTok</span>
+                  <span className="text-white/40 transition group-hover:translate-x-0.5 group-hover:text-white">
+                    <ArrowIcon />
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <FooterColumn title="Navigation" links={footerLinks.navigation} />
+            <FooterColumn title="Categories" links={footerLinks.categories} />
+            <FooterColumn title="Legal" links={footerLinks.legal} />
           </div>
 
-          <FooterColumn title="Navigation" links={footerLinks.navigation} />
-          <FooterColumn title="Categories" links={footerLinks.categories} />
-          <FooterColumn title="Legal" links={footerLinks.legal} />
-
-          <div>
-            <h3 className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-white">Follow us</h3>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.04] p-4 transition hover:border-aurion-purple hover:bg-white/[.06]">
-              <div className="grid h-12 w-12 place-items-center rounded-full border border-white/10 bg-white/[.06] text-lg font-black">♫</div>
-              <div>
-                <p className="text-sm font-extrabold">TikTok</p>
-                <p className="text-sm text-white/60">Daily tips, tools & insights around AI.</p>
-              </div>
-            </a>
+          {/* Bottom bar */}
+          <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
+            <p className="text-sm text-white/42">
+              © {new Date().getFullYear()} Aurion Futures. All rights reserved.
+            </p>
+            <p className="text-xs text-white/35">
+              Built for creators, traders &amp; entrepreneurs.
+            </p>
           </div>
         </div>
       </footer>
@@ -330,14 +538,95 @@ export default function Home() {
   );
 }
 
-function FooterColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+/* -------------------------------------------------------------------------- */
+/*                              SUB-COMPONENTS                                */
+/* -------------------------------------------------------------------------- */
+
+function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
+  const { Icon } = benefit;
+  return (
+    <div className="group relative overflow-hidden rounded-2xl">
+      {/* Gradient border (1px) via padding trick */}
+      <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(140deg,rgba(213,66,255,.45),rgba(35,150,255,.25)_45%,rgba(255,255,255,.06)_70%)] opacity-80 transition duration-300 group-hover:opacity-100" />
+      <div className="relative m-px rounded-[15px] bg-[linear-gradient(180deg,rgba(14,20,43,.95),rgba(9,13,28,.95))] p-7">
+        {/* subtle inner highlight */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+        <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/20" />
+
+        {/* Number badge (top-right) */}
+        <span className="absolute right-5 top-5 text-xs font-black tracking-widest text-white/25">
+          0{index + 1}
+        </span>
+
+        {/* Icon tile */}
+        <div className="relative mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-aurion-purple to-aurion-blue text-white shadow-[0_12px_32px_rgba(123,69,255,.35)]">
+          {/* inner glass highlight */}
+          <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/25 to-transparent opacity-50" />
+          <span className="relative">
+            <Icon />
+          </span>
+        </div>
+
+        <h3 className="text-xl font-black leading-tight tracking-[-0.02em] md:text-[1.35rem]">
+          {benefit.title}
+        </h3>
+        <p className="mt-3 text-[0.95rem] leading-7 text-white/65">
+          {benefit.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ToolCard({ tool }: { tool: Tool }) {
+  return (
+    <a
+      href={tool.href}
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#090E1E]/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-aurion-purple/50 hover:bg-[#0D1328]/90 hover:shadow-[0_22px_60px_rgba(89,56,255,.25)]"
+    >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+
+      <div
+        className={`mb-5 grid h-16 w-16 place-items-center rounded-xl bg-gradient-to-br ${tool.accent} text-xl font-black text-[#07101D] shadow-[0_12px_30px_rgba(0,0,0,.35)]`}
+      >
+        {tool.icon}
+      </div>
+
+      <p className="mb-2 text-[0.7rem] font-black uppercase tracking-[0.22em] text-aurion-cyan/85">
+        {tool.category}
+      </p>
+      <h3 className="text-lg font-extrabold">{tool.name}</h3>
+      <p className="mt-2.5 min-h-[88px] text-sm leading-6 text-white/60">
+        {tool.description}
+      </p>
+      <div className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-aurion-cyan transition group-hover:gap-3">
+        Learn more <ArrowIcon />
+      </div>
+    </a>
+  );
+}
+
+function FooterColumn({
+  title,
+  links
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
   return (
     <div>
-      <h3 className="mb-4 text-sm font-black uppercase tracking-[0.18em] text-white">{title}</h3>
-      <ul className="space-y-3 text-sm text-white/62">
+      <h3 className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-white/45">
+        {title}
+      </h3>
+      <ul className="space-y-3 text-sm text-white/70">
         {links.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="transition hover:text-white">{link.label}</a>
+            <a
+              href={link.href}
+              className="transition hover:text-white"
+            >
+              {link.label}
+            </a>
           </li>
         ))}
       </ul>

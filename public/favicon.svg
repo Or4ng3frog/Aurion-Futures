@@ -1,13 +1,15 @@
-<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <linearGradient id="g" x1="28" y1="25" x2="220" y2="224" gradientUnits="userSpaceOnUse">
-    <stop offset="0%" stop-color="#D542FF"/>
-    <stop offset="55%" stop-color="#7B45FF"/>
-    <stop offset="100%" stop-color="#2396FF"/>
-  </linearGradient>
-</defs>
-<path d="M29 222L112 34H147L68 222H29Z" fill="url(#g)"/>
-<path d="M109 145H184L204 180H129L109 145Z" fill="url(#g)"/>
-<path d="M131 192H212L232 222H151L131 192Z" fill="url(#g)"/>
-<path d="M149 34L229 222H189L119 72H143L149 34Z" fill="url(#g)"/>
+<svg width="256" height="256" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="afFavGrad" x1="14" y1="14" x2="106" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D542FF"/>
+      <stop offset="55%" stop-color="#7B45FF"/>
+      <stop offset="100%" stop-color="#2396FF"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8, 16)">
+    <path d="M50 6 L94 86 L6 86 Z M50 22 L82 78 L18 78 Z" fill="url(#afFavGrad)" fill-rule="evenodd"/>
+    <path d="M55.6 34 L60.6 34 L36.4 78 L31.4 78 Z" fill="url(#afFavGrad)"/>
+    <path d="M54 46 L72 46 L77.5 56 L48.5 56 Z" fill="url(#afFavGrad)"/>
+    <path d="M41.9 68 L96.1 68 L101.6 78 L36.4 78 Z" fill="url(#afFavGrad)"/>
+  </g>
 </svg>

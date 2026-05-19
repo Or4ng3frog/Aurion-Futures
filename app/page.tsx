@@ -68,29 +68,29 @@ const benefits: Benefit[] = [
     title: 'Save Time',
     description:
       'Automate repetitive tasks and focus on the work that actually moves your business forward.',
-    image: '/assets/benefit-save-time-premium.png',
-    imageClass: 'max-w-[190px] md:max-w-[210px] -translate-y-1'
+    image: '/assets/benefit-save-time-alpha.png',
+    imageClass: 'max-w-[150px] md:max-w-[168px]'
   },
   {
     title: 'Boost Productivity',
     description:
       'Use tested AI tools and practical automation systems to build faster workflows.',
-    image: '/assets/benefit-productivity-premium.png',
-    imageClass: 'max-w-[195px] md:max-w-[220px] scale-[0.98]'
+    image: '/assets/benefit-productivity-alpha.png',
+    imageClass: 'max-w-[150px] md:max-w-[172px] scale-[0.96]'
   },
   {
     title: 'Increase Income',
     description:
       'Scale smarter, monetize faster and build digital income systems with clarity.',
-    image: '/assets/benefit-income-premium.png',
-    imageClass: 'max-w-[175px] md:max-w-[190px] translate-y-2'
+    image: '/assets/benefit-income-alpha.png',
+    imageClass: 'max-w-[124px] md:max-w-[138px] translate-y-1'
   },
   {
     title: 'Stay Ahead',
     description:
       'Discover new AI solutions early and gain a real edge before they become mainstream.',
-    image: '/assets/benefit-ahead-premium.png',
-    imageClass: 'max-w-[185px] md:max-w-[205px]'
+    image: '/assets/benefit-ahead-alpha.png',
+    imageClass: 'max-w-[148px] md:max-w-[166px]'
   }
 ];
 
@@ -456,7 +456,7 @@ export default function Home() {
       {/* ------------------------------ ABOUT --------------------------- */}
       <section id="about" className="mx-auto max-w-7xl px-5 pb-16 lg:px-8 lg:pb-20">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(13,18,39,.98),rgba(14,17,32,.88))] p-8 shadow-card md:p-12">
-          <div className="grid gap-10 md:grid-cols-[1fr_.95fr] md:items-center">
+          <div className="grid gap-10 md:grid-cols-[1fr_.92fr] md:items-center">
             <div className="max-w-xl">
               <span className="mb-4 inline-flex rounded-full border border-white/18 bg-white/5 px-3 py-1 text-xs font-black uppercase tracking-[0.22em] text-white/80">
                 Grow with us
@@ -480,16 +480,16 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="relative min-h-[320px]">
+            <div className="relative min-h-[300px]">
               <div className="pointer-events-none absolute inset-0">
-                <div className="absolute right-14 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-aurion-purple/20 blur-3xl" />
-                <div className="absolute right-2 bottom-8 h-32 w-32 rounded-full bg-aurion-blue/16 blur-3xl" />
+                <div className="absolute right-12 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-aurion-purple/16 blur-3xl" />
+                <div className="absolute right-0 bottom-10 h-32 w-32 rounded-full bg-aurion-blue/12 blur-3xl" />
               </div>
-              <div className="relative z-10 flex h-full items-end justify-center md:justify-end">
+              <div className="relative z-10 flex h-full items-center justify-center md:justify-end">
                 <img
-                  src="/assets/cta-tiktok-premium.png"
+                  src="/assets/cta-tiktok-alpha.png"
                   alt="TikTok AI content visual"
-                  className="w-full max-w-[430px] translate-y-2 object-contain drop-shadow-[0_28px_80px_rgba(82,57,255,.26)] md:max-w-[470px]"
+                  className="w-full max-w-[360px] object-contain drop-shadow-[0_26px_70px_rgba(82,57,255,.24)] md:max-w-[390px]"
                 />
               </div>
             </div>
@@ -562,31 +562,30 @@ export default function Home() {
 
 function BenefitCard({ benefit, index }: { benefit: Benefit; index: number }) {
   return (
-    <div className="group relative overflow-hidden rounded-[1.9rem]">
-      <div className="absolute inset-0 rounded-[1.9rem] bg-[linear-gradient(145deg,rgba(213,66,255,.26),rgba(35,150,255,.16)_55%,rgba(255,255,255,.04)_82%)] opacity-90" />
-      <div className="relative m-px flex h-full flex-col rounded-[calc(1.9rem-1px)] bg-[linear-gradient(180deg,rgba(10,14,31,.985),rgba(7,11,24,.98))] px-6 pb-8 pt-6 md:px-7 md:pb-9 md:pt-7">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-        <div className="pointer-events-none absolute -left-10 top-8 h-24 w-24 rounded-full bg-aurion-purple/8 blur-3xl transition duration-300 group-hover:bg-aurion-purple/16" />
-        <div className="pointer-events-none absolute right-0 top-16 h-24 w-24 rounded-full bg-aurion-blue/8 blur-3xl transition duration-300 group-hover:bg-aurion-blue/14" />
+    <div className="group relative overflow-hidden rounded-[1.65rem]">
+      <div className="absolute inset-0 rounded-[1.65rem] bg-[linear-gradient(145deg,rgba(213,66,255,.38),rgba(35,150,255,.22)_50%,rgba(255,255,255,.05)_82%)] opacity-80 transition duration-300 group-hover:opacity-100" />
+      <div className="relative m-px rounded-[calc(1.65rem-1px)] bg-[linear-gradient(180deg,rgba(11,16,34,.98),rgba(8,12,26,.97))] p-6 md:p-7">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+        <div className="pointer-events-none absolute -left-8 top-8 h-24 w-24 rounded-full bg-aurion-purple/10 blur-3xl transition duration-300 group-hover:bg-aurion-purple/20" />
+        <div className="pointer-events-none absolute -right-10 bottom-4 h-28 w-28 rounded-full bg-aurion-blue/10 blur-3xl transition duration-300 group-hover:bg-aurion-blue/20" />
 
-        <div className="mb-7 flex items-start justify-between">
-          <div className="relative flex h-[190px] w-full items-center justify-center overflow-visible">
-            <div className="absolute inset-x-6 top-1/2 h-24 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(100,80,255,.18),transparent_70%)] blur-2xl" />
-            <img
-              src={benefit.image}
-              alt={benefit.title}
-              className={`relative z-10 w-full object-contain drop-shadow-[0_18px_42px_rgba(77,58,255,.18)] transition duration-500 group-hover:scale-[1.03] ${benefit.imageClass ?? 'max-w-[190px]'}`}
-            />
-          </div>
-          <span className="ml-4 shrink-0 pt-1 text-[0.65rem] font-black tracking-[0.26em] text-white/18">
-            0{index + 1}
-          </span>
+        <span className="absolute right-5 top-5 text-xs font-black tracking-widest text-white/25">
+          0{index + 1}
+        </span>
+
+        <div className="relative mb-6 h-[170px] overflow-hidden rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_35%,rgba(167,73,255,.16),transparent_58%),linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01))]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(89,56,255,.12),transparent_62%)] blur-2xl" />
+          <img
+            src={benefit.image}
+            alt={benefit.title}
+            className="relative z-10 h-full w-full object-contain p-3 drop-shadow-[0_18px_40px_rgba(77,58,255,.22)] transition duration-500 group-hover:scale-[1.03]"
+          />
         </div>
 
-        <h3 className="text-[1.9rem] font-black leading-[1.02] tracking-[-0.03em] text-white md:text-[2rem]">
+        <h3 className="text-xl font-black leading-tight tracking-[-0.02em] md:text-[1.35rem]">
           {benefit.title}
         </h3>
-        <p className="mt-4 max-w-[26ch] text-[1rem] leading-8 text-white/64">
+        <p className="mt-3 text-[0.95rem] leading-7 text-white/65">
           {benefit.description}
         </p>
       </div>

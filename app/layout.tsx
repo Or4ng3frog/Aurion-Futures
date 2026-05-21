@@ -1,10 +1,26 @@
 import type { Metadata, Viewport } from 'next';
+
+// Self-hosted fonts (no runtime Google Fonts dependency)
+import '@fontsource/fraunces/400.css';
+import '@fontsource/fraunces/500.css';
+import '@fontsource/fraunces/600.css';
+import '@fontsource/fraunces/700.css';
+import '@fontsource/fraunces/900.css';
+import '@fontsource/fraunces/400-italic.css';
+import '@fontsource/fraunces/600-italic.css';
+import '@fontsource/manrope/400.css';
+import '@fontsource/manrope/500.css';
+import '@fontsource/manrope/600.css';
+import '@fontsource/manrope/700.css';
+import '@fontsource/manrope/800.css';
+
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Aurion Futures | AI Tools, Automation & Digital Growth',
+  metadataBase: new URL('https://aurion-futures.com'),
+  title: 'Aurion Futures — Curated AI Tools, Tested & Recommended',
   description:
-    'Aurion Futures curates AI tools, automation systems and digital income solutions for creators, traders and entrepreneurs.',
+    'A hand-picked, independently tested selection of the AI tools we actually use to build, create and grow. Honest reviews, real workflows, no hype.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -16,8 +32,9 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }]
   },
   openGraph: {
-    title: 'Aurion Futures',
-    description: 'AI tools, automation and digital income systems curated by Aurion Futures.',
+    title: 'Aurion Futures — Curated AI Tools, Tested & Recommended',
+    description:
+      'A hand-picked, independently tested selection of the AI tools we actually use to build, create and grow.',
     type: 'website'
   }
 };
@@ -25,7 +42,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#070A17'
+  themeColor: '#F4EFE6'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

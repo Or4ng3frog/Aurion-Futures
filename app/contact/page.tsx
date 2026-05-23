@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Aurion Futures — suggest a tool, explore a collaboration, or ask a question.',
+  description: 'Get in touch with Aurion Future — suggest a tool, explore a collaboration, or ask a question.',
   alternates: { canonical: '/contact' }
 };
 
@@ -12,7 +12,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-4xl px-5 py-10 lg:px-8 lg:py-14">
         <a href="/" className="mb-8 inline-flex items-center gap-3 text-sm font-semibold text-ink2 transition hover:text-amber">
           <span aria-hidden="true">←</span>
-          <span className="font-display text-base">Aurion Futures</span>
+          <span className="font-display text-base">Aurion Future</span>
         </a>
         <section className="legal-card rounded-[2rem] p-7 md:p-10">
           <span className="inline-flex rounded-full border border-line bg-paper px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-ink3">

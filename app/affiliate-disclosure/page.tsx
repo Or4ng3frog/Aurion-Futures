@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
 export const metadata: Metadata = {
-  title: 'Affiliate Disclosure — Aurion Futures',
-  description: 'How Aurion Futures uses affiliate links and earns commissions.',
+  title: 'Affiliate Disclosure — Aurion Future',
+  description: 'How Aurion Future uses affiliate links and earns commissions.',
   alternates: { canonical: '/affiliate-disclosure' },
 };
 
@@ -11,12 +11,12 @@ export default function AffiliateDisclosurePage() {
   return (
     <LegalPage
       title="Affiliate Disclosure"
-      intro="Transparency matters to us. Here is exactly how Aurion Futures makes money, and what that means for you."
+      intro="Transparency matters to us. Here is exactly how Aurion Future makes money, and what that means for you."
       lastUpdated="May 2026"
     >
       <h2>The short version</h2>
       <p>
-        Aurion Futures contains affiliate links. If you click one and sign up for or purchase
+        Aurion Future contains affiliate links. If you click one and sign up for or purchase
         a product, we may receive a commission &mdash; at no additional cost to you. The price you
         pay is exactly the same as it would be if you went to the provider directly.
       </p>

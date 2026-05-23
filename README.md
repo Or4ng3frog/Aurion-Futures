@@ -85,3 +85,33 @@ is unused. Safe to delete for a leaner repo.
 ## Tools (now 7)
 Synthesia, ElevenLabs, Pictory, Writesonic, AdCreative.ai (Ads), Framer, Make.
 All in `app/lib/tools.ts`. Each has its own `/tools/<slug>` review page and OG image.
+
+
+## Update — launch-ready changes
+- **Brand name** is now "Aurion Future" everywhere (was "Aurion Futures").
+- **Favicon** redesigned: refined amber "A" with serif apex + baseline accent, matching the
+  site. Files in `public/` and `public/assets/`. NOTE: if the old purple icon still shows in
+  a browser tab after deploy, it's cached — hard-refresh or wait for the CDN to update.
+- **Affiliate links via Short.io**: each tool in `app/lib/tools.ts` has a `shortUrl` field with
+  a `https://YOUR.short.io/...` placeholder. Paste your real Short.io link there; the site uses
+  it automatically for clicks (falls back to the website `url` until you do). Create/track/swap
+  links in Short.io anytime — no code changes. The `url` field stays as the real destination
+  (used for SEO/structured data).
+- **Google Analytics (GA4)**: ID `G-0WD6TJD30W` is wired into `app/layout.tsx`.
+  NOTE on DSGVO: GA currently loads on page load. For strict German consent compliance you may
+  want to gate it behind the cookie banner's consent — your Privacy Policy already discloses
+  analytics. Ask a lawyer if unsure.
+- **Social links**: TikTok first → `@aurion.future`, then YouTube `@aurion.future`, then
+  Instagram `aurion.future`. Edit hrefs in `app/page.tsx` if handles change.
+- **"Upcoming on the channel"**: the homepage panel now says "Coming next / Upcoming on the
+  channel" since the videos don't exist yet. Edit the list items in `app/page.tsx`.
+- **Journal (3 SEO articles)**: live at `/blog` with full article pages at `/blog/<slug>`,
+  Article JSON-LD, OG and canonical. Content in `app/lib/posts.ts` — add a post by appending
+  to the array. Titles target real search intent (best AI voiceover tool 2026, faceless content
+  with AI, AI tools that replaced my content team).
+- Blog posts are included in the sitemap automatically.
+
+## Adding a video to the homepage (when ready)
+When you have your intro video, the cleanest spot is the hero or the "Follow along" section.
+Drop an MP4 in `public/` and embed a `<video controls poster="/og-image.png">` tag, or paste a
+YouTube embed. Tell me and I'll wire it in.

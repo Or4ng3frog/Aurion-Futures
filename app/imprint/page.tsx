@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
 export const metadata: Metadata = {
-  title: 'Imprint — Aurion Futures',
-  description: 'Legal information and provider identification for Aurion Futures.',
+  title: 'Imprint — Aurion Future',
+  description: 'Legal information and provider identification for Aurion Future.',
   alternates: { canonical: '/imprint' },
 };
 

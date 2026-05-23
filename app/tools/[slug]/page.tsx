@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { tools, getTool, logoFor } from '../../lib/tools';
+import { tools, getTool, logoFor, affiliateLink } from '../../lib/tools';
 
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
@@ -19,13 +19,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     openGraph: {
       type: 'article',
       url,
-      title: `${tool.name} Review — Aurion Futures`,
+      title: `${tool.name} Review — Aurion Future`,
       description: tool.verdict,
       images: [{ url: ogImage, width: 1200, height: 630, alt: `${tool.name} review` }]
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${tool.name} Review — Aurion Futures`,
+      title: `${tool.name} Review — Aurion Future`,
       description: tool.verdict,
       images: [ogImage]
     }
@@ -96,7 +96,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       worstRating: 1
     },
     author: { '@type': 'Person', name: 'Dennis Klahn' },
-    publisher: { '@type': 'Organization', name: 'Aurion Futures' },
+    publisher: { '@type': 'Organization', name: 'Aurion Future' },
     reviewBody: tool.verdict
   };
 
@@ -110,7 +110,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       <header className="sticky top-0 z-50 border-b border-line/80 bg-paper/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="/" className="font-display text-xl font-semibold tracking-tightest text-ink">
-            Aurion<span className="text-amber"> Futures</span>
+            Aurion<span className="text-amber"> Future</span>
           </a>
           <a href="/#tools" className="inline-flex items-center gap-2 text-sm font-semibold text-ink2 transition hover:text-amber">
             <span aria-hidden="true">&larr;</span> All tools
@@ -164,7 +164,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
           <aside className="rounded-2xl border border-line bg-cream p-6 shadow-soft md:w-64">
             <p className="text-[0.66rem] font-bold uppercase tracking-[0.18em] text-ink3">Try it</p>
             <p className="mt-1 font-display text-lg text-ink">{tool.name}</p>
-            <a href={tool.url} target="_blank" rel="sponsored noopener noreferrer"
+            <a href={affiliateLink(tool)} target="_blank" rel="sponsored noopener noreferrer"
               className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-amber px-5 py-3 text-sm font-semibold text-paper transition hover:bg-amberSoft">
               Visit {tool.name}
               <Arrow className="h-4 w-4" />
@@ -250,7 +250,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
               <p className="font-display text-2xl font-semibold tracking-tight">Ready to try {tool.name}?</p>
               <p className="mt-1 text-paper/70">{tool.pricingFrom} &middot; See if it fits your workflow.</p>
             </div>
-            <a href={tool.url} target="_blank" rel="sponsored noopener noreferrer"
+            <a href={affiliateLink(tool)} target="_blank" rel="sponsored noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-semibold text-paper transition hover:bg-amberSoft">
               Visit {tool.name} <Arrow className="h-4 w-4" />
             </a>
@@ -281,7 +281,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       {/* footer */}
       <footer className="mt-6 border-t border-line bg-paper2/50">
         <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-3 px-5 py-8 text-sm text-ink3 sm:flex-row sm:items-center lg:px-8">
-          <p>&copy; {new Date().getFullYear()} Aurion Futures. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Aurion Future. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="/affiliate-disclosure" className="hover:text-amber">Affiliate Disclosure</a>
             <a href="/imprint" className="hover:text-amber">Imprint</a>

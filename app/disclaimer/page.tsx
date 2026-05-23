@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer — Aurion Futures',
-  description: 'General disclaimer for the content published on Aurion Futures.',
+  title: 'Disclaimer — Aurion Future',
+  description: 'General disclaimer for the content published on Aurion Future.',
   alternates: { canonical: '/disclaimer' },
 };
 
@@ -16,7 +16,7 @@ export default function DisclaimerPage() {
     >
       <h2>No professional advice</h2>
       <p>
-        The content on Aurion Futures is provided for general information and educational
+        The content on Aurion Future is provided for general information and educational
         purposes only. It does not constitute professional, financial, legal, tax or
         investment advice, and should not be relied upon as such. Before making any business
         or purchasing decision, you should conduct your own research and, where appropriate,

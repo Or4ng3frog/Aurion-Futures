@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { tools, logoFor, type Category } from './lib/tools';
+import { tools, logoFor, affiliateLink, type Category } from './lib/tools';
 
 /* ==========================================================================
    AURION FUTURES — Editorial affiliate landing page
@@ -74,9 +74,9 @@ export default function Home() {
       {/* ------------------------------ HEADER ------------------------------ */}
       <header className="sticky top-0 z-50 border-b border-line/80 bg-paper/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Aurion Futures home">
+          <a href="#top" className="flex items-center gap-3" aria-label="Aurion Future home">
             <span className="font-display text-2xl font-semibold tracking-tightest text-ink">
-              Aurion<span className="text-amber"> Futures</span>
+              Aurion<span className="text-amber"> Future</span>
             </span>
           </a>
 
@@ -275,15 +275,20 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <SocialButton label="YouTube" href="https://youtube.com/" brand="youtube.com" />
-                <SocialButton label="TikTok" href="https://tiktok.com/" brand="tiktok.com" />
-                <SocialButton label="Instagram" href="https://instagram.com/" brand="instagram.com" />
+                <SocialButton label="TikTok" href="https://www.tiktok.com/@aurion.future" brand="tiktok.com" />
+                <SocialButton label="YouTube" href="https://www.youtube.com/@aurion.future" brand="youtube.com" />
+                <SocialButton label="Instagram" href="https://www.instagram.com/aurion.future" brand="instagram.com" />
               </div>
             </div>
 
             <div className="relative">
               <div className="rounded-2xl border border-line bg-paper p-7">
-                <p className="font-display text-xl italic text-ink2">This week on the channel</p>
+                <div className="flex items-center gap-2.5">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-amber/12 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-amber">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Coming next
+                  </span>
+                  <p className="font-display text-xl italic text-ink2">Upcoming on the channel</p>
+                </div>
                 <ul className="mt-5 space-y-4">
                   {[
                     '7 AI tools that replaced my whole content team',
@@ -308,14 +313,14 @@ export default function Home() {
           <div className="grid gap-10 md:grid-cols-[1.6fr_.8fr_.8fr]">
             <div>
               <span className="font-display text-2xl font-semibold tracking-tightest text-ink">
-                Aurion<span className="text-amber"> Futures</span>
+                Aurion<span className="text-amber"> Future</span>
               </span>
               <p className="mt-4 max-w-sm leading-7 text-ink2">
                 An independent, hand-curated guide to the AI tools worth your time —
                 for creators, traders and founders building what’s next.
               </p>
               <p className="mt-6 max-w-sm text-xs leading-relaxed text-ink3">
-                Aurion Futures contains affiliate links. We may earn a commission on
+                Aurion Future contains affiliate links. We may earn a commission on
                 purchases made through them, at no additional cost to you.
               </p>
             </div>
@@ -324,7 +329,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-line pt-7 text-sm text-ink3 sm:flex-row sm:items-center">
-            <p>© {new Date().getFullYear()} Aurion Futures. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Aurion Future. All rights reserved.</p>
             <p className="font-display italic">Curated with intent.</p>
           </div>
         </div>
@@ -395,7 +400,7 @@ function ToolCard({ tool }: { tool: (typeof tools)[number] }) {
           className="flex-1 rounded-full border border-ink/20 px-4 py-2.5 text-center text-sm font-semibold text-ink transition hover:border-ink hover:bg-ink hover:text-paper">
           Read review
         </a>
-        <a href={tool.url} target="_blank" rel="sponsored noopener noreferrer"
+        <a href={affiliateLink(tool)} target="_blank" rel="sponsored noopener noreferrer"
           aria-label={`Visit ${tool.name}`}
           className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber text-paper transition hover:bg-amberSoft">
           <Arrow className="h-4 w-4" />

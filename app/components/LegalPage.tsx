@@ -11,7 +11,7 @@ export default function LegalPage({ title, intro, lastUpdated, children }: Legal
       <div className="mx-auto max-w-5xl px-5 py-10 lg:px-8 lg:py-14">
         <a href="/" className="mb-8 inline-flex items-center gap-3 text-sm font-semibold text-ink2 transition hover:text-amber">
           <span aria-hidden="true">&larr;</span>
-          <span className="font-display text-base">Aurion Futures</span>
+          <span className="font-display text-base">Aurion Future</span>
         </a>
 
         <section className="legal-card rounded-[2rem] p-7 md:p-10">

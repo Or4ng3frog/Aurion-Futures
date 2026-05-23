@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Aurion Futures',
-  description: 'How Aurion Futures handles personal data under the GDPR.',
+  title: 'Privacy Policy — Aurion Future',
+  description: 'How Aurion Future handles personal data under the GDPR.',
   alternates: { canonical: '/privacy-policy' },
 };
 

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — Aurion Futures',
-  description: 'The terms governing your use of the Aurion Futures website.',
+  title: 'Terms of Use — Aurion Future',
+  description: 'The terms governing your use of the Aurion Future website.',
   alternates: { canonical: '/terms-of-use' },
 };
 
@@ -16,7 +16,7 @@ export default function TermsOfUsePage() {
     >
       <h2>1. Acceptance</h2>
       <p>
-        By accessing Aurion Futures (&ldquo;the website&rdquo;), you agree to be bound by these Terms of
+        By accessing Aurion Future (&ldquo;the website&rdquo;), you agree to be bound by these Terms of
         Use and all applicable laws. If you do not agree, please do not use the website.
       </p>
 

@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Aurion Futures — suggest a tool, explore a collaboration, or ask a question.',
+  alternates: { canonical: '/contact' }
+};
+
 export default function ContactPage() {
   return (
     <main className="legal-shell text-ink">
@@ -18,7 +26,7 @@ export default function ContactPage() {
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-line bg-paper p-6">
               <h2 className="font-display text-xl font-semibold text-ink">Email</h2>
-              <p className="mt-3 text-ink2">hello@aurionfutures.com</p>
+              <p className="mt-3 text-ink2">info@aurionfuture.com</p>
             </div>
             <div className="rounded-2xl border border-line bg-paper p-6">
               <h2 className="font-display text-xl font-semibold text-ink">Social</h2>

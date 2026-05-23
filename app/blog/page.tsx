@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Journal',
+  description: 'Honest reviews, comparisons and practical guides for AI tools, automation and digital growth.',
+  alternates: { canonical: '/blog' }
+};
+
 export default function BlogPage() {
   return (
     <main className="legal-shell text-ink">

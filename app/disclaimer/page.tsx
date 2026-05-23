@@ -1,26 +1,62 @@
+import type { Metadata } from 'next';
 import LegalPage from '../components/LegalPage';
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: 'Disclaimer — Aurion Futures',
+  description: 'General disclaimer for the content published on Aurion Futures.',
+  alternates: { canonical: '/disclaimer' },
+};
+
+export default function DisclaimerPage() {
   return (
     <LegalPage
       title="Disclaimer"
-      intro="Aurion Futures provides information, tools and recommendations with great care. However, the use of all content is at your own responsibility."
+      intro="Please read the following carefully. It explains the limits of the information provided on this website."
+      lastUpdated="May 2026"
     >
-      <h2>1. Website content</h2>
+      <h2>No professional advice</h2>
       <p>
-        The content provided is for informational and marketing purposes only. Despite careful preparation, we do not guarantee accuracy, completeness or timeliness.
+        The content on Aurion Futures is provided for general information and educational
+        purposes only. It does not constitute professional, financial, legal, tax or
+        investment advice, and should not be relied upon as such. Before making any business
+        or purchasing decision, you should conduct your own research and, where appropriate,
+        consult a qualified professional.
       </p>
-      <h2>2. No financial, legal or tax advice</h2>
+
+      <h2>Reviews reflect our experience</h2>
       <p>
-        Content related to AI tools, business systems, trading or digital income strategies does not constitute individual financial, legal or tax advice. Please consult qualified professionals if needed.
+        Tool reviews, ratings and recommendations represent our own subjective opinion based
+        on our experience at the time of writing. Software changes constantly &mdash; features,
+        pricing and performance described here may differ from what you encounter. Always
+        verify current details on the provider&rsquo;s own website before purchasing.
       </p>
-      <h2>3. External links</h2>
+
+      <h2>No guarantee of results</h2>
       <p>
-        We assume no liability for the content of external websites linked from Aurion Futures. The operators of those websites are solely responsible for their content.
+        We make no guarantee that using any tool featured on this site will produce any
+        particular result, income or outcome. Results depend on many factors outside our
+        control, including your own effort, skill and circumstances.
       </p>
-      <h2>4. Liability</h2>
+
+      <h2>External links</h2>
       <p>
-        To the extent permitted by law, liability for direct or indirect damages arising from the use of this website or the information provided is excluded.
+        This website contains links to external websites operated by third parties. We have no
+        control over their content and accept no responsibility for it. The respective
+        operator is solely responsible for the content of linked pages. See our{' '}
+        <a href="/imprint">Imprint</a> for further detail on liability for links.
+      </p>
+
+      <h2>Affiliate relationships</h2>
+      <p>
+        Some links on this site are affiliate links. See our{' '}
+        <a href="/affiliate-disclosure">Affiliate Disclosure</a> for full details.
+      </p>
+
+      <h2>Accuracy</h2>
+      <p>
+        While we take care to keep information accurate and up to date, we do not warrant that
+        the content is complete, current or error-free. Use of the information on this site is
+        at your own risk.
       </p>
     </LegalPage>
   );

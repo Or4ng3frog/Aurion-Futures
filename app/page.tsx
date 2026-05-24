@@ -108,8 +108,11 @@ export default function Home() {
 
       {/* -------------------------------- HERO ------------------------------ */}
       <section id="top" className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-5 pb-14 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
-          <div className="grid items-end gap-12 md:grid-cols-[1.25fr_.75fr]">
+        {/* soft amber glow behind the visual */}
+        <div aria-hidden="true"
+          className="pointer-events-none absolute right-[-10%] top-10 h-[420px] w-[620px] rounded-full bg-amber/10 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
+          <div className="grid items-center gap-12 md:grid-cols-[1.05fr_.95fr]">
             <div>
               <p className="rise mb-6 inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.32em] text-amber"
                 style={{ animationDelay: '60ms' }}>
@@ -117,7 +120,7 @@ export default function Home() {
                 Curated · Tested · Independent
               </p>
 
-              <h1 className="rise font-display text-[3.1rem] font-semibold leading-[0.98] tracking-tightest text-ink sm:text-[4.2rem] lg:text-[5.2rem]"
+              <h1 className="rise font-display text-[3.1rem] font-semibold leading-[0.98] tracking-tightest text-ink sm:text-[4.2rem] lg:text-[4.8rem]"
                 style={{ animationDelay: '140ms' }}>
                 The AI tools<br />
                 we actually<br />
@@ -128,7 +131,7 @@ export default function Home() {
                 style={{ animationDelay: '240ms' }}>
                 No affiliate dumping ground. A short, honest shortlist of the software
                 behind our own content, automation and growth — with the trade-offs
-                spelled out, so you can pick fast and start this weekend.
+                spelled out, so you can pick fast and start today.
               </p>
 
               <div className="rise mt-9 flex flex-col gap-3 sm:flex-row"
@@ -143,31 +146,41 @@ export default function Home() {
                   How we choose
                 </a>
               </div>
-            </div>
 
-            {/* Editorial trust card — FIXED: capped avatars + separated text */}
-            <div className="rise relative" style={{ animationDelay: '420ms' }}>
-              <div className="rounded-2xl border border-line bg-cream p-7 shadow-soft">
-                <div className="flex items-center gap-1 text-amber">
-                  {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4" />)}
-                </div>
-                <p className="mt-4 font-display text-2xl leading-snug tracking-tight text-ink">
-                  “Finally a list that doesn’t push everything — only what’s worth my time.”
-                </p>
-                <div className="mt-6 flex items-center gap-3.5">
+              {/* compact trust row */}
+              <div className="rise mt-9 flex flex-wrap items-center gap-x-6 gap-y-3"
+                style={{ animationDelay: '440ms' }}>
+                <div className="flex items-center gap-2.5">
                   <div className="flex shrink-0 -space-x-2.5">
                     {[1, 2, 3].map((n) => (
                       <img key={n} src={`/assets/avatar-${n}.png`} alt=""
-                        className="h-9 w-9 rounded-full border-2 border-cream object-cover" />
+                        className="h-8 w-8 rounded-full border-2 border-paper object-cover" />
                     ))}
                   </div>
-                  <p className="text-sm leading-snug text-ink3">
-                    Followed by creators,<br className="hidden sm:block" /> traders &amp; founders
-                  </p>
+                  <div className="flex items-center gap-1.5">
+                    <span className="flex text-amber">
+                      {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-3.5 w-3.5" />)}
+                    </span>
+                  </div>
                 </div>
+                <p className="text-sm text-ink3">
+                  Followed by creators, traders &amp; founders
+                </p>
               </div>
-              <span className="absolute -right-3 -top-3 rotate-3 rounded-full bg-amber px-3 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-paper shadow-soft">
+            </div>
+
+            {/* Showcase illustration */}
+            <div className="rise relative" style={{ animationDelay: '420ms' }}>
+              <div className="relative overflow-hidden rounded-3xl border border-line bg-cream shadow-lift">
+                <img src="/assets/hero-showcase.png"
+                  alt="From idea to a polished, published site — the Aurion Future build flow"
+                  className="w-full" />
+              </div>
+              <span className="absolute -left-3 -top-3 rotate-[-3deg] rounded-full bg-amber px-3.5 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-paper shadow-soft">
                 {tools.length} tools, hand-picked
+              </span>
+              <span className="absolute -bottom-3 -right-3 rotate-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[0.7rem] font-bold uppercase tracking-wider text-ink2 shadow-soft">
+                Idea → Build → Launch
               </span>
             </div>
           </div>
@@ -222,6 +235,27 @@ export default function Home() {
         <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((tool) => <ToolCard key={tool.slug} tool={tool} />)}
         </div>
+      </section>
+
+      {/* --------------------------- TESTIMONIAL ---------------------------- */}
+      <section className="mx-auto max-w-4xl px-5 pb-4 lg:px-8">
+        <figure className="rounded-3xl border border-line bg-cream p-9 text-center shadow-soft md:p-12">
+          <div className="mb-5 flex justify-center text-amber">
+            {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-5 w-5" />)}
+          </div>
+          <blockquote className="font-display text-2xl italic leading-snug tracking-tight text-ink md:text-3xl">
+            “Finally a list that doesn’t push everything — only what’s worth my time.”
+          </blockquote>
+          <figcaption className="mt-6 flex items-center justify-center gap-3 text-sm text-ink3">
+            <span className="flex -space-x-2.5">
+              {[1, 2, 3].map((n) => (
+                <img key={n} src={`/assets/avatar-${n}.png`} alt=""
+                  className="h-8 w-8 rounded-full border-2 border-cream object-cover" />
+              ))}
+            </span>
+            Followed by creators, traders &amp; founders
+          </figcaption>
+        </figure>
       </section>
 
       {/* ---------------------------- PRINCIPLES ---------------------------- */}
@@ -283,11 +317,11 @@ export default function Home() {
 
             <div className="relative">
               <div className="rounded-2xl border border-line bg-paper p-7">
-                <div className="flex items-center gap-2.5">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-amber/12 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-amber">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Coming next
+                <div className="flex items-center justify-between gap-3 border-b border-line pb-4">
+                  <p className="font-display text-xl italic text-ink">Upcoming on the channel</p>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-amber/12 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-amber">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Soon
                   </span>
-                  <p className="font-display text-xl italic text-ink2">Upcoming on the channel</p>
                 </div>
                 <ul className="mt-5 space-y-4">
                   {[

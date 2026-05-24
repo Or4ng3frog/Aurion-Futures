@@ -3,13 +3,12 @@
    The homepage grid, the logo strip, and each /tools/[slug] review page all
    read from this one array.
 
-   >>> AFFILIATE / TRACKING LINKS (Short.io) <<<
+   >>> AFFILIATE / TRACKING LINKS (go.aurionfuture.com via Short.io) <<<
    Each tool has two link fields:
      - `url`       : the real destination website (kept for reference + SEO/JSON-LD)
-     - `shortUrl`  : YOUR Short.io link. Paste it here. This is what users actually click.
+     - `shortUrl`  : your go.aurionfuture.com tracking link. This is what users actually click.
    The site uses `shortUrl` when present, otherwise falls back to `url`.
-   So you can create/track/swap affiliate links in Short.io anytime, without code changes.
-   Replace each "https://YOUR.short.io/xxxx" placeholder below with your real Short.io link.
+   Manage/track/swap the redirects in your Short.io dashboard anytime, without code changes.
    ========================================================================== */
 
 export type Category =
@@ -46,7 +45,7 @@ export const tools: Tool[] = [
     domain: 'synthesia.io',
     category: 'Video',
     url: 'https://www.synthesia.io/',
-    shortUrl: 'https://YOUR.short.io/synth', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/synthesia',
     tagline: 'Turn a script into a polished presenter video — no camera, no studio.',
     blurb: 'AI avatar videos for marketing, onboarding and sales — no camera required.',
     rating: 4.6,
@@ -86,7 +85,7 @@ export const tools: Tool[] = [
     domain: 'elevenlabs.io',
     category: 'Voice',
     url: 'https://elevenlabs.io/',
-    shortUrl: 'https://YOUR.short.io/11labs', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/elevenlabs',
     tagline: 'The most natural AI voiceover we have heard — full stop.',
     blurb: 'Strikingly natural AI voiceover for shorts, podcasts and product demos.',
     rating: 4.8,
@@ -125,7 +124,7 @@ export const tools: Tool[] = [
     domain: 'pictory.ai',
     category: 'Video',
     url: 'https://pictory.ai/',
-    shortUrl: 'https://YOUR.short.io/pictory', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/pictory',
     tagline: 'One long video in, a week of short clips out.',
     blurb: 'Cut long-form content into short, caption-ready clips in minutes.',
     rating: 4.3,
@@ -164,7 +163,7 @@ export const tools: Tool[] = [
     domain: 'writesonic.com',
     category: 'Copywriting',
     url: 'https://writesonic.com/',
-    shortUrl: 'https://YOUR.short.io/wsonic', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/writesonic',
     tagline: 'Ad copy, landing pages and SEO drafts, on tap.',
     blurb: 'Landing-page copy, ad variations and SEO drafts on tap.',
     rating: 4.2,
@@ -203,7 +202,7 @@ export const tools: Tool[] = [
     domain: 'adcreative.ai',
     category: 'Ads',
     url: 'https://www.adcreative.ai/',
-    shortUrl: 'https://YOUR.short.io/adcr', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/adcreative',
     tagline: 'Conversion-focused ad creatives, scored before you ever spend a cent.',
     blurb: 'Generate ad creatives and copy at scale, with AI scoring that predicts what converts.',
     rating: 4.1,
@@ -243,7 +242,7 @@ export const tools: Tool[] = [
     domain: 'framer.com',
     category: 'Website',
     url: 'https://www.framer.com/',
-    shortUrl: 'https://YOUR.short.io/framer', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/framer',
     tagline: 'Design and ship a premium site without touching code.',
     blurb: 'Design and ship premium sites without touching a line of code.',
     rating: 4.7,
@@ -282,7 +281,7 @@ export const tools: Tool[] = [
     domain: 'make.com',
     category: 'Automation',
     url: 'https://www.make.com/',
-    shortUrl: 'https://YOUR.short.io/make', // <-- paste your Short.io link
+    shortUrl: 'https://go.aurionfuture.com/make',
     tagline: 'Wire your tools together and let the busywork run itself.',
     blurb: 'Connect your tools and automate the repetitive work in between.',
     rating: 4.5,
@@ -321,9 +320,9 @@ export function getTool(slug: string) {
   return tools.find((t) => t.slug === slug);
 }
 
-// The link users actually click: your Short.io tracking link if set, else the website.
+// The link users actually click: your go.aurionfuture.com tracking link if set, else the website.
 export function affiliateLink(tool: Tool) {
-  return tool.shortUrl && !tool.shortUrl.includes('YOUR.short.io') ? tool.shortUrl : tool.url;
+  return tool.shortUrl && tool.shortUrl.startsWith('http') ? tool.shortUrl : tool.url;
 }
 
 // Brand logo loaded straight from the tool's domain — no local asset needed.

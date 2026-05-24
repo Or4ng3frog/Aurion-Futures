@@ -115,3 +115,18 @@ All in `app/lib/tools.ts`. Each has its own `/tools/<slug>` review page and OG i
 When you have your intro video, the cleanest spot is the hero or the "Follow along" section.
 Drop an MP4 in `public/` and embed a `<video controls poster="/og-image.png">` tag, or paste a
 YouTube embed. Tell me and I'll wire it in.
+
+
+## Final update — hero asset, real links, cleanup
+- **Hero illustration**: the generated showcase image (`public/assets/hero-showcase.png`) is now
+  the hero visual on the homepage, with floating "7 tools, hand-picked" and "Idea → Build → Launch"
+  badges and a soft amber glow. The old testimonial card moved to a dedicated centered quote band
+  between the shortlist and the principles section (social proof preserved).
+- **Affiliate links are LIVE**: each tool now points to its real go.aurionfuture.com redirect
+  (e.g. go.aurionfuture.com/synthesia). Manage/track them in your Short.io dashboard. To change
+  one, edit `shortUrl` in app/lib/tools.ts.
+- **"Upcoming on the channel"**: fixed the redundant double label — now one clean header with a
+  small "Soon" pill.
+
+The site is launch-ready. When you want to swap the hero illustration or add a video later,
+replace `public/assets/hero-showcase.png` or tell me and I'll wire in a video embed.

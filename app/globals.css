@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
 }
@@ -14,8 +14,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #F4EFE6;
-  color: #1A1714;
+  background: #070A14;
+  color: #E2E8F0;
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -23,19 +23,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-::selection { background: #1A1714; color: #F4EFE6; }
-
-/* ----- Paper grain layered on every page ----- */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.45;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
-  mix-blend-mode: multiply;
-}
+::selection { background: #F4B740; color: #070A14; }
 
 /* ----- Display utility ----- */
 .font-display { font-family: var(--font-display), Georgia, serif; }
@@ -98,26 +86,15 @@ body::before {
 }
 
 /* ==========================================================================
-   DARK HOMEPAGE — "AI Stack Command Center" aesthetic.
-   All rules below are scoped to .aurion-dark so the warm light theme used by
-   legal / blog / tool-review pages is never affected.
+   DARK "AI Stack Command Center" aesthetic — now the product-wide design
+   system. The .aurion-dark root is applied by the homepage and the shared
+   Shell, so every page (home, legal, journal, contact, tool reviews) gets it.
    ========================================================================== */
 .aurion-dark {
   --gold: #F4B740;
   --iris: #7C8BFF;
   --glow: #54D4F0;
   color-scheme: dark;
-}
-
-/* Make the global <body> dark whenever the homepage is mounted, so the light
-   default background can never bleed through during an anchor smooth-scroll or
-   an overscroll bounce. Scoped via :has() to the homepage's .aurion-dark root,
-   so legal / blog / tool pages keep their warm paper background untouched. */
-body:has(.aurion-dark) {
-  background: #070A14;
-}
-body:has(.aurion-dark)::before {
-  display: none; /* drop the light-paper grain texture on the dark homepage */
 }
 
 /* Layered radial field that sits behind everything on the homepage */
@@ -293,18 +270,25 @@ body:has(.aurion-dark)::before {
   .flow-line { animation: none; }
 }
 
-/* ============== LEGAL PAGES (light editorial) ============== */
-.legal-shell { min-height: 100vh; background: #F4EFE6; }
-.legal-card {
-  border: 1px solid #D8CFBF;
-  background: #FBF8F2;
-  box-shadow: 0 30px 70px -40px rgba(26,23,20,.4);
-}
-.legal-copy p, .legal-copy li { color: #403A33; line-height: 1.85; }
-.legal-copy a { color: #B6541E; text-decoration: underline; text-underline-offset: 3px; }
-.legal-copy h2 {
-  margin-top: 2.2rem; margin-bottom: .6rem;
+/* ============== PROSE ON DARK (legal / articles) ==============
+   Readable, professional, not overdesigned — styles the raw <h2>/<p>/<ul>
+   markup rendered inside legal & article pages on the dark shell. */
+.prose-dark h2 {
+  margin-top: 2.4rem; margin-bottom: .65rem;
   font-family: var(--font-display), Georgia, serif;
-  font-size: 1.5rem; font-weight: 600; color: #1A1714;
+  font-size: 1.35rem; font-weight: 600; color: #F1F5FF;
+  letter-spacing: -0.01em;
 }
-.legal-copy ul { padding-left: 1.2rem; }
+.prose-dark h2:first-child { margin-top: 0; }
+.prose-dark p { margin-top: 1rem; color: #aeb8cc; line-height: 1.85; }
+.prose-dark li { color: #aeb8cc; line-height: 1.8; }
+.prose-dark ul { margin-top: 1rem; padding-left: 1.25rem; list-style: disc; }
+.prose-dark li { margin-top: .4rem; }
+.prose-dark a { color: #F4B740; text-decoration: underline; text-underline-offset: 3px; transition: color .2s ease; }
+.prose-dark a:hover { color: #FBD27E; }
+.prose-dark code {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: .08rem .4rem; border-radius: .35rem;
+  color: #FBD27E; font-size: .88em;
+}

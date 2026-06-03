@@ -6,8 +6,8 @@
    ========================================================================== */
 
 export const nav = [
-  { label: 'The Stack', href: '#stack' },
-  { label: 'How we pick', href: '#how-we-pick' },
+  { label: 'The Stack', href: '/#stack' },
+  { label: 'How we pick', href: '/#how-we-pick' },
   { label: 'Journal', href: '/blog' },
   { label: 'Contact', href: '/contact' }
 ];

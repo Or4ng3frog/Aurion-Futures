@@ -38,8 +38,8 @@ const accentRing: Record<string, string> = {
 
 export default function Hero() {
   return (
-    <section id="top" className="relative">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-12 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-24 lg:pt-20">
+    <section id="top" className="relative overflow-hidden">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:pb-24 lg:pt-16">
         {/* ── Left column ───────────────────────────────────────── */}
         <motion.div
           initial="hidden"
@@ -115,45 +115,49 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
-          className="relative"
+          className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          {/* ambient glow behind the command center */}
-          <div aria-hidden className="pointer-events-none absolute -inset-6 -z-10">
-            <div className="absolute right-4 top-2 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-            <div className="absolute bottom-0 left-2 h-64 w-64 rounded-full bg-iris/20 blur-3xl" />
-          </div>
-
-          {/* floating wrapper */}
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
-          >
-            <CommandCenter />
-          </motion.div>
-
-          {/* floating mini-badges — bracket the card to balance the composition */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5.5, ease: 'easeInOut', repeat: Infinity }}
-            className="absolute -left-5 top-16 hidden rounded-2xl border border-white/10 bg-night-700/85 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:block"
-          >
-            <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Verdict</p>
-            <p className="mt-0.5 text-sm font-semibold text-gold">Honest, not hype</p>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, -9, 0] }}
-            transition={{ duration: 6.2, ease: 'easeInOut', repeat: Infinity, delay: 0.6 }}
-            className="absolute -right-4 bottom-10 hidden items-center gap-2.5 rounded-2xl border border-white/10 bg-night-700/85 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:flex"
-          >
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-glow/15 text-glow">
-              <Sparkles className="h-4 w-4" />
-            </span>
-            <div>
-              <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Updated</p>
-              <p className="text-sm font-semibold text-slate-100">Every week</p>
+          {/* Padded stage: every floating element is positioned against THIS box,
+              so nothing can escape the hero — even mid-animation. */}
+          <div className="relative px-3 py-6 sm:px-6 sm:py-7">
+            {/* ambient glow behind the command center (decorative, clipped by stage) */}
+            <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+              <div className="absolute right-2 top-4 h-60 w-60 rounded-full bg-gold/20 blur-3xl" />
+              <div className="absolute bottom-2 left-2 h-52 w-52 rounded-full bg-iris/20 blur-3xl" />
             </div>
-          </motion.div>
+
+            {/* floating wrapper — gentle, low-amplitude drift */}
+            <motion.div
+              animate={{ y: [0, -7, 0] }}
+              transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
+            >
+              <CommandCenter />
+            </motion.div>
+
+            {/* floating mini-badges — bracket the card, fully inside the stage */}
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 5.5, ease: 'easeInOut', repeat: Infinity }}
+              className="absolute left-0 top-12 hidden rounded-2xl border border-white/10 bg-night-700/90 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:block"
+            >
+              <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Verdict</p>
+              <p className="mt-0.5 text-sm font-semibold text-gold">Honest, not hype</p>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 6.2, ease: 'easeInOut', repeat: Infinity, delay: 0.6 }}
+              className="absolute bottom-12 right-0 hidden items-center gap-2.5 rounded-2xl border border-white/10 bg-night-700/90 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:flex"
+            >
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-glow/15 text-glow">
+                <Sparkles className="h-4 w-4" />
+              </span>
+              <div>
+                <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Updated</p>
+                <p className="text-sm font-semibold text-slate-100">Every week</p>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

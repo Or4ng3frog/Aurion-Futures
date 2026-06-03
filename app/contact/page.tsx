@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { Mail, Share2, ArrowUpRight } from 'lucide-react';
+import Shell from '../components/Shell';
+import { socials } from '../lib/home-content';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -8,33 +11,58 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="legal-shell text-ink">
-      <div className="mx-auto max-w-4xl px-5 py-10 lg:px-8 lg:py-14">
-        <a href="/" className="mb-8 inline-flex items-center gap-3 text-sm font-semibold text-ink2 transition hover:text-amber">
-          <span aria-hidden="true">←</span>
-          <span className="font-display text-base">Aurion Future</span>
-        </a>
-        <section className="legal-card rounded-[2rem] p-7 md:p-10">
-          <span className="inline-flex rounded-full border border-line bg-paper px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-ink3">
-            Contact
-          </span>
-          <h1 className="mt-5 font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">Let’s connect</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-ink2">
-            Want to suggest a tool, explore a collaboration, or work together on something?
-            Reach out — we read everything.
-          </p>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl border border-line bg-paper p-6">
-              <h2 className="font-display text-xl font-semibold text-ink">Email</h2>
-              <p className="mt-3 text-ink2">info@aurionfuture.com</p>
-            </div>
-            <div className="rounded-2xl border border-line bg-paper p-6">
-              <h2 className="font-display text-xl font-semibold text-ink">Social</h2>
-              <p className="mt-3 text-ink2">Find the latest tool breakdowns via the channels linked on the homepage.</p>
+    <Shell>
+      <div className="mx-auto max-w-3xl px-5 py-14 lg:px-8 lg:py-20">
+        <p className="eyebrow text-xs font-semibold uppercase tracking-[0.28em] text-gold">Contact</p>
+        <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-slate-50 md:text-5xl">
+          Let’s <span className="text-gradient-gold">connect.</span>
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-400">
+          Want to suggest a tool, explore a collaboration, or work together on something?
+          Reach out — we read everything.
+        </p>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <a
+            href="mailto:info@aurionfuture.com"
+            className="glass border-glow group flex flex-col rounded-2xl p-7 transition hover:bg-white/[0.05]"
+          >
+            <span className="grid h-11 w-11 place-items-center rounded-xl border border-gold/30 bg-gold/10 text-gold">
+              <Mail className="h-5 w-5" />
+            </span>
+            <h2 className="mt-5 font-display text-xl font-semibold text-slate-50">Email</h2>
+            <p className="mt-2 text-slate-400">info@aurionfuture.com</p>
+            <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold">
+              Write to us
+              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
+          </a>
+
+          <div className="glass border-glow flex flex-col rounded-2xl p-7">
+            <span className="grid h-11 w-11 place-items-center rounded-xl border border-iris/30 bg-iris/10 text-iris">
+              <Share2 className="h-5 w-5" />
+            </span>
+            <h2 className="mt-5 font-display text-xl font-semibold text-slate-50">Social</h2>
+            <p className="mt-2 text-slate-400">
+              Catch the latest tool breakdowns as they drop.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm font-medium text-slate-200 transition hover:border-white/25 hover:bg-white/[0.06]"
+                >
+                  {s.label}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              ))}
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </main>
+    </Shell>
   );
 }

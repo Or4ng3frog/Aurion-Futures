@@ -1,4 +1,5 @@
 import { footerLinks } from '../../lib/home-content';
+import Logo from '../Logo';
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();
@@ -7,14 +8,9 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8 lg:py-16">
         <div className="grid gap-10 md:grid-cols-[1.6fr_.8fr_.8fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gold-sheen text-[0.95rem] font-black text-night">
-                A
-              </span>
-              <span className="font-display text-xl font-semibold tracking-tight text-slate-50">
-                Aurion<span className="text-gradient-gold"> Future</span>
-              </span>
-            </div>
+            <a href="/" aria-label="Aurion Future home" className="inline-flex">
+              <Logo markClass="h-9 w-9" wordClass="text-xl" />
+            </a>
             <p className="mt-4 max-w-sm leading-7 text-slate-400">
               A premium AI stack intelligence platform — we test, compare and recommend
               the AI tools worth your time, for creators, traders and founders building

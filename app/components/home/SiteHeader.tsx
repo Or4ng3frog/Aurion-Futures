@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X, ShieldCheck } from 'lucide-react';
 import { nav } from '../../lib/home-content';
+import Logo from '../Logo';
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,13 +26,8 @@ export default function SiteHeader() {
       ].join(' ')}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Aurion Future home">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gold-sheen text-[0.95rem] font-black text-night shadow-glow-gold">
-            A
-          </span>
-          <span className="font-display text-xl font-semibold tracking-tight text-slate-50">
-            Aurion<span className="text-gradient-gold"> Future</span>
-          </span>
+        <a href="/" className="flex items-center" aria-label="Aurion Future home">
+          <Logo markClass="h-9 w-9" wordClass="text-xl" />
         </a>
 
         <nav className="hidden items-center gap-9 text-sm md:flex">
@@ -52,7 +48,7 @@ export default function SiteHeader() {
           </a>
 
           <a
-            href="#stack"
+            href="/#stack"
             className="group hidden items-center gap-2 rounded-full bg-gold-sheen px-5 py-2.5 text-sm font-semibold text-night shadow-glow-gold transition hover:brightness-110 sm:inline-flex"
           >
             Browse the Stack
@@ -86,7 +82,7 @@ export default function SiteHeader() {
               </a>
             ))}
             <a
-              href="#stack"
+              href="/#stack"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold-sheen px-5 py-3 text-sm font-semibold text-night"
             >

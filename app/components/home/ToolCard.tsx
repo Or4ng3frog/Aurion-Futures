@@ -12,7 +12,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.21, 0.65, 0.27, 1] } }
       }}
       whileHover={{ y: -6 }}
-      className="glass border-glow group relative flex flex-col rounded-2xl p-6 shadow-glass transition-shadow duration-300 hover:shadow-glass-lift"
+      className="glass border-glow group relative flex h-full flex-col rounded-2xl p-6 shadow-glass transition-shadow duration-300 hover:shadow-glass-lift"
     >
       {tool.tag && (
         <span className="absolute right-5 top-5 rounded-full border border-gold/30 bg-gold/10 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-wider text-gold">
@@ -47,14 +47,14 @@ export default function ToolCard({ tool }: { tool: Tool }) {
 
       <p className="mt-4 text-[0.95rem] leading-7 text-slate-400">{tool.blurb}</p>
 
-      {/* honest signals */}
-      <dl className="mt-5 space-y-3 border-t border-white/10 pt-5 text-sm">
+      {/* honest signals — grows so every card's CTA row lines up */}
+      <dl className="mt-5 flex-1 space-y-3 border-t border-white/10 pt-5 text-sm">
         <Signal icon={<Target className="h-3.5 w-3.5" />} label="Best for" tone="muted" value={tool.bestFor} />
         <Signal icon={<Zap className="h-3.5 w-3.5" />} label="Why we use it" tone="gold" value={tool.whyWeUse} />
         <Signal icon={<Eye className="h-3.5 w-3.5" />} label="Watch out" tone="muted" value={tool.watchOut} />
       </dl>
 
-      {/* actions */}
+      {/* actions — pinned to the bottom edge on every card */}
       <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
         <a
           href={`/tools/${tool.slug}`}

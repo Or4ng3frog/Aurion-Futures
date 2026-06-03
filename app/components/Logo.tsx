@@ -29,8 +29,12 @@ export default function Logo({
   wordClass?: string;
 }) {
   return (
-    <span className="inline-flex items-center gap-2.5">
-      <BrandMark className={markClass} />
+    // One unit: items-center handles the base alignment; the icon gets a 2px
+    // upward nudge to correct the chevron's bottom-heavy optical center, and a
+    // small negative right margin to absorb the mark's built-in side padding so
+    // the gap reads tight and premium rather than loose.
+    <span className="inline-flex items-center gap-2">
+      <BrandMark className={`${markClass} -mr-1 -translate-y-[2px] shrink-0`} />
       <span
         className={`font-sans font-semibold leading-none tracking-[-0.01em] text-slate-50 ${wordClass}`}
       >

@@ -27,7 +27,20 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-7 text-sm text-slate-500 sm:flex-row sm:items-center">
-          <p>© {year} Aurion Future. All rights reserved.</p>
+          <div className="space-y-1">
+            <p>© {year} Aurion Future. All rights reserved.</p>
+            <p className="text-xs text-slate-600">
+              Website designed by{' '}
+              <a
+                href="https://klahn-consulting.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-slate-500 transition hover:text-gold"
+              >
+                Klahn Consulting
+              </a>
+            </p>
+          </div>
           <p className="font-display italic text-slate-400">Curated with intent.</p>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function Logo({
     // small negative right margin to absorb the mark's built-in side padding so
     // the gap reads tight and premium rather than loose.
     <span className="inline-flex items-center gap-2">
-      <BrandMark className={`${markClass} -mr-1 -translate-y-[2px] shrink-0`} />
+      <BrandMark className={`${markClass} -mr-1.5 -translate-y-[2px] shrink-0`} />
       <span
         className={`font-sans font-semibold leading-none tracking-[-0.01em] text-slate-50 ${wordClass}`}
       >

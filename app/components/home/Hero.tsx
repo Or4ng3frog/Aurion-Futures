@@ -120,10 +120,11 @@ export default function Hero() {
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
           <div className="relative">
-            {/* ambient glow behind the card — purely decorative, sits behind & clipped */}
+            {/* ambient glow behind the card — purely decorative, sits behind & clipped.
+                Warm gold kept light so it reads premium, not brown/heavy. */}
             <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-              <div className="absolute right-0 top-2 h-56 w-56 rounded-full bg-gold/20 blur-3xl" />
-              <div className="absolute bottom-2 left-0 h-48 w-48 rounded-full bg-iris/20 blur-3xl" />
+              <div className="absolute right-0 top-2 h-48 w-48 rounded-full bg-gold/[0.12] blur-3xl" />
+              <div className="absolute bottom-2 left-0 h-48 w-48 rounded-full bg-iris/[0.16] blur-3xl" />
             </div>
 
             {/* one self-contained dashboard card, with a gentle, contained drift */}

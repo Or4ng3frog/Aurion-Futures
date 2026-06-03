@@ -1,10 +1,10 @@
 /* ==========================================================================
    AURION FUTURE — brand mark (single source of truth for generated assets).
-   "Future Gate" — a minimal, flat, premium abstract mark:
-     • two pillars + a peaked roof form a gateway / portal
-     • the peaked doorway cut from the centre is a forward-facing path
+   "Ascending Path" — a minimal, flat, premium abstract mark:
+     • a bold off-white chevron (open peak) — direction / momentum
+     • a smaller amber chevron nested inside — a forward / ascending path
      • only subtly references the letter "A" (the peak) — not a literal A
-   FLAT off-white #F8FAFC only — monochrome, no gradients, no amber, no orbit,
+   FLAT fills only — off-white #F8FAFC + amber #F4B740. No gradients, no orbit,
    no node, no star, no 3D, no thin lines. Strong silhouette on dark, to 16px.
 
    `brandMarkSvg()` returns a standalone, transparent SVG string. It is consumed
@@ -14,7 +14,8 @@
 
 export function brandMarkSvg(size = 48): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 48 48" fill="none">
-  <path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/>
+  <path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/>
+  <path fill="#F4B740" d="M21 40 L24 33 L27 40 Z"/>
 </svg>`;
 }
 

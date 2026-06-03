@@ -40,17 +40,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 }
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/assets/aurion-favicon-32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/assets/aurion-favicon-16.png', type: 'image/png', sizes: '16x16' },
-      { url: '/assets/aurion-favicon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/assets/aurion-favicon-512.png', type: 'image/png', sizes: '512x512' }
-    ],
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }]
-  },
+  // Favicon, apple-touch and OG/Twitter images are provided by the App Router
+  // metadata file conventions: app/icon.svg, app/apple-icon.tsx,
+  // app/opengraph-image.tsx and app/twitter-image.tsx.
   manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
@@ -58,14 +50,12 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${site.name} — ${site.tagline}` }]
+    description: site.description
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    images: ['/og-image.png']
+    description: site.description
   }
 };
 

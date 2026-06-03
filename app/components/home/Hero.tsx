@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Sparkles,
+  BadgeCheck,
+  CalendarClock,
   Lightbulb,
   PenLine,
   Mic,
@@ -117,45 +119,19 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
           className="relative mx-auto w-full max-w-md lg:max-w-none"
         >
-          {/* Padded stage: every floating element is positioned against THIS box,
-              so nothing can escape the hero — even mid-animation. */}
-          <div className="relative px-3 py-6 sm:px-6 sm:py-7">
-            {/* ambient glow behind the command center (decorative, clipped by stage) */}
+          <div className="relative">
+            {/* ambient glow behind the card — purely decorative, sits behind & clipped */}
             <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-              <div className="absolute right-2 top-4 h-60 w-60 rounded-full bg-gold/20 blur-3xl" />
-              <div className="absolute bottom-2 left-2 h-52 w-52 rounded-full bg-iris/20 blur-3xl" />
+              <div className="absolute right-0 top-2 h-56 w-56 rounded-full bg-gold/20 blur-3xl" />
+              <div className="absolute bottom-2 left-0 h-48 w-48 rounded-full bg-iris/20 blur-3xl" />
             </div>
 
-            {/* floating wrapper — gentle, low-amplitude drift */}
-            <motion.div
-              animate={{ y: [0, -7, 0] }}
-              transition={{ duration: 7, ease: 'easeInOut', repeat: Infinity }}
-            >
-              <CommandCenter />
-            </motion.div>
-
-            {/* floating mini-badges — bracket the card, fully inside the stage */}
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 5.5, ease: 'easeInOut', repeat: Infinity }}
-              className="absolute left-0 top-12 hidden rounded-2xl border border-white/10 bg-night-700/90 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:block"
-            >
-              <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Verdict</p>
-              <p className="mt-0.5 text-sm font-semibold text-gold">Honest, not hype</p>
-            </motion.div>
-
+            {/* one self-contained dashboard card, with a gentle, contained drift */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 6.2, ease: 'easeInOut', repeat: Infinity, delay: 0.6 }}
-              className="absolute bottom-12 right-0 hidden items-center gap-2.5 rounded-2xl border border-white/10 bg-night-700/90 px-4 py-3 shadow-glass-lift backdrop-blur-md sm:flex"
+              transition={{ duration: 8, ease: 'easeInOut', repeat: Infinity }}
             >
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-glow/15 text-glow">
-                <Sparkles className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="text-[0.6rem] font-medium uppercase tracking-[0.14em] text-slate-400">Updated</p>
-                <p className="text-sm font-semibold text-slate-100">Every week</p>
-              </div>
+              <CommandCenter />
             </motion.div>
           </div>
         </motion.div>
@@ -166,37 +142,48 @@ export default function Hero() {
 
 function CommandCenter() {
   return (
-    <div className="glass-strong border-glow relative overflow-hidden rounded-3xl p-6 sm:p-7">
-      {/* window chrome */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <div className="flex items-center gap-2">
-          <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
-          <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
-          <span className="h-3 w-3 rounded-full bg-[#28C840]" />
-          <span className="ml-3 font-display text-sm font-medium text-slate-200">
+    <div className="glass-strong border-glow relative overflow-hidden rounded-3xl p-5 sm:p-6">
+      {/* ── window chrome: dots · title · Live ── */}
+      <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-4">
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="h-3 w-3 shrink-0 rounded-full bg-[#FF5F57]" />
+          <span className="h-3 w-3 shrink-0 rounded-full bg-[#FEBC2E]" />
+          <span className="h-3 w-3 shrink-0 rounded-full bg-[#28C840]" />
+          <span className="ml-2 truncate font-display text-sm font-medium text-slate-200">
             AI Stack · Command Center
           </span>
         </div>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-glow/30 bg-glow/10 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.12em] text-glow">
+        <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-glow/30 bg-glow/10 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.12em] text-glow">
           <span className="status-dot inline-block h-1.5 w-1.5 rounded-full bg-glow text-glow" />
           Live
         </span>
       </div>
 
-      {/* workflow pipeline */}
-      <div className="relative mt-5">
-        {/* connecting rail */}
-        <div className="absolute bottom-3 left-[1.65rem] top-3 w-px bg-gradient-to-b from-iris/40 via-gold/40 to-glow/40" />
+      {/* ── verdict status row — a normal dashboard row, never floats ── */}
+      <div className="mt-4 flex items-center gap-3 rounded-xl border border-gold/20 bg-gold/[0.06] px-3.5 py-2.5">
+        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-gold/30 bg-gold/10 text-gold">
+          <BadgeCheck className="h-4 w-4" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-slate-400">Verdict</p>
+          <p className="truncate text-sm font-semibold text-gold">Honest, not hype</p>
+        </div>
+        <span className="status-dot inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold text-gold" />
+      </div>
+
+      {/* ── workflow pipeline — aligned icon timeline, even row heights ── */}
+      <div className="relative mt-4">
+        {/* connecting rail (centred on the 2.75rem icons) */}
+        <div className="absolute bottom-5 left-[1.375rem] top-5 w-px bg-gradient-to-b from-iris/40 via-gold/40 to-glow/40" />
         {/* traveling pulse */}
         <motion.div
           aria-hidden
-          className="absolute left-[1.4rem] h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_12px_3px_rgba(244,183,64,.7)]"
-          initial={{ top: 8 }}
-          animate={{ top: ['4%', '92%', '4%'] }}
+          className="absolute left-[1.07rem] h-2.5 w-2.5 rounded-full bg-gold shadow-[0_0_12px_3px_rgba(244,183,64,.7)]"
+          animate={{ top: ['6%', '90%', '6%'] }}
           transition={{ duration: 6, ease: 'easeInOut', repeat: Infinity }}
         />
 
-        <ul className="relative space-y-2.5">
+        <ul className="relative space-y-2">
           {stackNodes.map((node, i) => {
             const Icon = nodeIcons[node.key];
             return (
@@ -205,21 +192,21 @@ function CommandCenter() {
                 initial={{ opacity: 0, x: 14 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: EASE, delay: 0.5 + i * 0.1 }}
-                className="flex items-center gap-3.5"
+                className="flex items-center gap-3"
               >
                 <span
-                  className={`relative z-10 grid h-[3.3rem] w-[3.3rem] shrink-0 place-items-center rounded-xl border backdrop-blur-md ${accentRing[node.accent]}`}
+                  className={`relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-xl border backdrop-blur-md ${accentRing[node.accent]}`}
                 >
-                  <Icon className={`h-5 w-5 ${accentText[node.accent]}`} />
+                  <Icon className={`h-[1.15rem] w-[1.15rem] ${accentText[node.accent]}`} />
                 </span>
-                <div className="flex flex-1 items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
-                  <div>
-                    <p className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-slate-400">
+                <div className="flex h-11 flex-1 items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5">
+                  <div className="min-w-0">
+                    <p className="text-[0.56rem] font-semibold uppercase tracking-[0.16em] text-slate-400">
                       Stage {String(i + 1).padStart(2, '0')}
                     </p>
-                    <p className="text-sm font-semibold text-slate-100">{node.label}</p>
+                    <p className="truncate text-sm font-semibold leading-tight text-slate-100">{node.label}</p>
                   </div>
-                  <span className={`text-[0.62rem] font-medium ${accentText[node.accent]}`}>●</span>
+                  <span className={`ml-2 text-[0.62rem] font-medium ${accentText[node.accent]}`}>●</span>
                 </div>
               </motion.li>
             );
@@ -227,19 +214,32 @@ function CommandCenter() {
         </ul>
       </div>
 
-      {/* footer metrics */}
-      <div className="mt-5 grid grid-cols-3 gap-2 border-t border-white/10 pt-4 text-center">
-        {[
-          { v: '7', l: 'Tools' },
-          { v: '6', l: 'Stages' },
-          { v: '⚡', l: 'Weekly' }
-        ].map((m) => (
-          <div key={m.l} className="rounded-xl bg-white/[0.02] py-2">
-            <p className="font-display text-lg font-semibold text-slate-50">{m.v}</p>
-            <p className="text-[0.62rem] uppercase tracking-[0.12em] text-slate-400">{m.l}</p>
-          </div>
-        ))}
+      {/* ── bottom metrics — clean 3-column grid (Updated lives here now) ── */}
+      <div className="mt-5 grid grid-cols-3 gap-2 border-t border-white/10 pt-4">
+        <Metric value="7" label="Tools" />
+        <Metric value="6" label="Stages" />
+        <Metric value="Weekly" label="Updated" icon={<CalendarClock className="h-3.5 w-3.5 text-glow" />} />
       </div>
+    </div>
+  );
+}
+
+function Metric({
+  value,
+  label,
+  icon
+}: {
+  value: string;
+  label: string;
+  icon?: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.02] px-2 py-2.5 text-center">
+      <p className="flex items-center gap-1 font-display text-base font-semibold leading-none text-slate-50">
+        {icon}
+        {value}
+      </p>
+      <p className="mt-1.5 text-[0.6rem] uppercase tracking-[0.12em] text-slate-400">{label}</p>
     </div>
   );
 }

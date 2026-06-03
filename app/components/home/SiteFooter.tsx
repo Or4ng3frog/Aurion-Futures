@@ -9,7 +9,7 @@ export default function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-[1.6fr_.8fr_.8fr]">
           <div>
             <a href="/" aria-label="Aurion Future home" className="inline-flex">
-              <Logo markClass="h-9 w-9" wordClass="text-xl" />
+              <Logo markClass="h-10 w-10" wordClass="text-xl" />
             </a>
             <p className="mt-4 max-w-sm leading-7 text-slate-400">
               A premium AI stack intelligence platform — we test, compare and recommend

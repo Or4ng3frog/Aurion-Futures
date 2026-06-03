@@ -74,13 +74,16 @@ is unused. Safe to delete for a leaner repo.
 - **robots.txt**: generated at `/robots.txt` (app/robots.ts), references the sitemap.
 - **Structured data**: each tool page emits Review JSON-LD for rich search results.
 - **Open Graph images**:
-  - Homepage: `public/og-image.png` (1200x630)
+  - Default: generated at `/opengraph-image` (and `/twitter-image`) by `app/opengraph-image.tsx`
+    via `next/og` — a branded dark card built from the live brand mark (no committed PNG).
   - Per tool: `public/og/tools/<slug>.png` — branded card with rating + price.
-  - To regenerate after editing tools, the generator script logic lives in the build notes;
-    the PNGs are committed so you don't need to rebuild them to deploy.
-- **Favicon**: redesigned to match the new editorial look (amber "A" monogram on warm ink).
-  Files in `public/` (favicon.ico, favicon.svg, apple-touch-icon.png, site.webmanifest)
-  and `public/assets/aurion-favicon-*.png`.
+- **Brand mark & favicon** (premium AI-OS monogram: bold "A" + orbit swoosh + AI node):
+  - Single source: `app/lib/brand-mark.ts` (`brandMarkSvg()`); on-page lockup in
+    `app/components/Logo.tsx` (`<BrandMark>` / `<Logo>`).
+  - Favicon: `app/icon.svg` (App Router metadata file → `<link rel="icon">`).
+  - Apple touch icon: `app/apple-icon.tsx` (generated PNG, 180×180, edge runtime).
+  - All derive from the same mark, so they stay in sync. `app/lib/brand-mark.ts` is the
+    place to tweak the geometry.
 
 ## Tools (now 7)
 Synthesia, ElevenLabs, Pictory, Writesonic, AdCreative.ai (Ads), Framer, Make.

@@ -27,7 +27,7 @@ export default function SiteHeader() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
         <a href="/" className="flex items-center py-1" aria-label="Aurion Future home">
-          <Logo markClass="h-10 w-10" wordClass="text-xl" />
+          <Logo markClass="h-9 w-9 sm:h-10 sm:w-10" wordClass="text-lg sm:text-xl" />
         </a>
 
         <nav className="hidden items-center gap-9 text-sm md:flex">

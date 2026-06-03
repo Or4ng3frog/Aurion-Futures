@@ -1,24 +1,22 @@
 /* ==========================================================================
    AURION FUTURE — brand mark + wordmark lockup.
-   "Apex / Forward Cut" monogram (kept in sync with app/lib/brand-mark.ts):
-     • geometric "A"  — one bold, solid off-white silhouette (apex + legs + bar)
-     • forward cut    — the enclosed counter is an amber upward arrowhead, a
-                        hidden forward / progress / signal cue inside the A
-   Flat fills only — no gradients, no orbit, no node, no 3D, no thin lines.
-   Inline SVG so it stays crisp from a 16px favicon to the footer lockup.
+   "Future Gate" monogram (kept in sync with app/lib/brand-mark.ts):
+     • two pillars + a peaked roof form a gateway / portal
+     • the peaked doorway cut from the centre is a forward-facing path
+     • only subtly references the letter "A" (the peak) — not a literal A
+   Flat off-white only — monochrome, no gradients, no amber, no 3D, no thin
+   lines. Inline SVG so it stays crisp from a 16px favicon to the footer lockup.
    ========================================================================== */
 
 export function BrandMark({ className = 'h-10 w-10' }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} role="img" aria-hidden="true" fill="none">
-      {/* solid A with the counter cut out */}
+      {/* gateway frame (pillars + peaked roof) with a peaked doorway cut out */}
       <path
         fill="#F8FAFC"
         fillRule="evenodd"
-        d="M24 5.5 L42 42 L33 42 L27 34 L21 34 L15 42 L6 42 Z M24 16 L30 30 L24 26 L18 30 Z"
+        d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"
       />
-      {/* amber forward arrowhead filling the counter */}
-      <path fill="#F4B740" d="M24 16 L30 30 L24 26 L18 30 Z" />
     </svg>
   );
 }

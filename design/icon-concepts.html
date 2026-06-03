@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AurionFuture — "Future Gate" icon concepts</title>
+<style>
+  :root { --off:#F8FAFC; --amber:#F4B740; --ink:#070A14; --tile:#0B1224; --line:rgba(255,255,255,.08); --muted:#94A3B8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ink); color:var(--off);
+    font:15px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; padding:48px 32px; }
+  h1 { font-size:22px; font-weight:700; letter-spacing:-.01em; margin:0 0 6px; }
+  p.sub { color:var(--muted); margin:0 0 36px; max-width:680px; }
+  .grid { display:grid; gap:24px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); max-width:1180px; }
+  .card { border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg,rgba(255,255,255,.03),transparent); padding:22px; }
+  .card h2 { font-size:15px; font-weight:700; margin:0 0 2px; }
+  .card .desc { color:var(--muted); font-size:13px; margin:0 0 18px; min-height:34px; }
+  .row { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .hero { width:104px; height:104px; border-radius:22px; background:var(--tile); display:grid; place-items:center; }
+  .hero svg { width:64px; height:64px; }
+  .sizes { display:flex; align-items:flex-end; gap:14px; }
+  .chip { display:grid; place-items:center; background:var(--tile); border-radius:9px; }
+  .s32 { width:44px; height:44px; } .s32 svg{ width:32px;height:32px; }
+  .s20 { width:30px; height:30px; } .s20 svg{ width:20px;height:20px; }
+  .s16 { width:24px; height:24px; } .s16 svg{ width:16px;height:16px; }
+  .cap { color:var(--muted); font-size:10px; text-align:center; margin-top:5px; letter-spacing:.04em; }
+  .mono { margin-left:8px; padding-left:18px; border-left:1px solid var(--line); }
+  .reco { border-color:rgba(244,183,64,.5); box-shadow:0 0 0 1px rgba(244,183,64,.25); }
+  .badge { display:inline-block; margin-left:8px; font-size:10px; font-weight:700; color:var(--amber);
+    border:1px solid rgba(244,183,64,.5); border-radius:999px; padding:2px 8px; vertical-align:middle; letter-spacing:.06em; }
+  footer { color:var(--muted); font-size:12px; margin-top:40px; }
+</style>
+</head>
+<body>
+  <h1>AurionFuture — “Future Gate” icon concepts</h1>
+  <p class="sub">Five minimal abstract marks. Each is shown large, then at 32 / 20 / 16&nbsp;px to test favicon strength,
+  and again in pure monochrome (right) to confirm it works without the amber accent. Off-white&nbsp;#F8FAFC · amber&nbsp;#F4B740.</p>
+
+  <div class="grid">
+
+    <!-- C1 -->
+    <div class="card">
+      <h2>1 · Apex Gate</h2>
+      <p class="desc">Two diagonal forms meeting at an apex; the inverted-V negative space is the gateway/path. Most minimal, strongest silhouette.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L24 9 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L24 9 Z"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L24 9 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L24 9 Z"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L24 9 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L24 9 Z"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L24 9 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L24 9 Z"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L24 9 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L24 9 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C2 -->
+    <div class="card">
+      <h2>2 · Aperture</h2>
+      <p class="desc">An apex split by a thin vertical seam — a “gate of light”. The amber slit is the only accent; subtle, premium.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L23 9.5 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L25 9.5 Z"/><path fill="#F4B740" d="M23 9.5 L25 9.5 L24 23 Z"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L23 9.5 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L25 9.5 Z"/><path fill="#F4B740" d="M23 9.5 L25 9.5 L24 23 Z"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L23 9.5 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L25 9.5 Z"/><path fill="#F4B740" d="M23 9.5 L25 9.5 L24 23 Z"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L23 9.5 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L25 9.5 Z"/><path fill="#F4B740" d="M23 9.5 L25 9.5 L24 23 Z"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L17.5 41 L23 9.5 Z"/><path fill="#F8FAFC" d="M41 41 L30.5 41 L25 9.5 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C3 -->
+    <div class="card reco">
+      <h2>3 · Future Gate <span class="badge">RECOMMENDED</span></h2>
+      <p class="desc">Two pillars + a peaked roof with a peaked doorway cut from the centre — a literal gateway/portal, with the opening reading as a forward path. Subtly an “A”.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C3b amber variant -->
+    <div class="card">
+      <h2>3b · Future Gate + threshold</h2>
+      <p class="desc">Same gate, with one restrained amber line at the threshold (the “step through”). Optional accent variant of #3.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/><rect x="17" y="38.5" width="14" height="2.5" fill="#F4B740"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/><rect x="17" y="38.5" width="14" height="2.5" fill="#F4B740"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/><rect x="17" y="38.5" width="14" height="2.5" fill="#F4B740"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/><rect x="17" y="38.5" width="14" height="2.5" fill="#F4B740"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M8 41 L8 18 L24 7 L40 18 L40 41 Z M17 41 L17 27 L24 19 L31 27 L31 41 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C4 -->
+    <div class="card">
+      <h2>4 · Ascending Path</h2>
+      <p class="desc">A bold off-white chevron with a smaller amber chevron nested inside — two stacked up-cues reading as a forward/ascending path.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/><path fill="#F4B740" d="M21 40 L24 33 L27 40 Z"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/><path fill="#F4B740" d="M21 40 L24 33 L27 40 Z"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/><path fill="#F4B740" d="M21 40 L24 33 L27 40 Z"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/><path fill="#F4B740" d="M21 40 L24 33 L27 40 Z"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" d="M7 41 L24 12 L41 41 L32 41 L24 25 L16 41 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C5 -->
+    <div class="card">
+      <h2>5 · Apex Doorway</h2>
+      <p class="desc">A solid apex (peak/mountain) with a peaked doorway cut from the base — a single confident silhouette: summit + path through.</p>
+      <div class="row">
+        <div class="hero">
+          <svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M24 7 L42 41 L6 41 Z M20.5 41 L20.5 24 L24 18 L27.5 24 L27.5 41 Z"/></svg>
+        </div>
+        <div class="sizes">
+          <div><div class="chip s32"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M24 7 L42 41 L6 41 Z M20.5 41 L20.5 24 L24 18 L27.5 24 L27.5 41 Z"/></svg></div><div class="cap">32</div></div>
+          <div><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M24 7 L42 41 L6 41 Z M20.5 41 L20.5 24 L24 18 L27.5 24 L27.5 41 Z"/></svg></div><div class="cap">20</div></div>
+          <div><div class="chip s16"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M24 7 L42 41 L6 41 Z M20.5 41 L20.5 24 L24 18 L27.5 24 L27.5 41 Z"/></svg></div><div class="cap">16</div></div>
+          <div class="mono"><div class="chip s20"><svg viewBox="0 0 48 48"><path fill="#F8FAFC" fill-rule="evenodd" d="M24 7 L42 41 L6 41 Z M20.5 41 L20.5 24 L24 18 L27.5 24 L27.5 41 Z"/></svg></div><div class="cap">mono</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Open this file in a browser. Reply with the number you want (1, 2, 3, 3b, 4 or 5) and I’ll implement it in the header, footer and favicon — the “Aurion Future” wordmark stays unchanged.</footer>
+</body>
+</html>

@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { brandMarkDataUri, BRAND } from './lib/brand-mark';
+import { brandMarkDataUri } from './lib/brand-mark';
 
 // Apple touch icon — generated from the same brand mark (real PNG).
 export const runtime = 'edge';
@@ -16,7 +16,7 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: `radial-gradient(circle at 50% 34%, ${BRAND.inkRaise}, ${BRAND.ink})`
+          backgroundColor: '#0B1224'
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}

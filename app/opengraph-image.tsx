@@ -18,8 +18,7 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '80px 96px',
-          backgroundColor: BRAND.ink,
-          backgroundImage: 'radial-gradient(120% 120% at 82% -10%, rgba(244,183,64,.20), rgba(7,10,20,0) 55%)'
+          backgroundColor: '#0B1224'
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>

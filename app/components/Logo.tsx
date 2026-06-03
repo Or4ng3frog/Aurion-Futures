@@ -1,20 +1,24 @@
 /* ==========================================================================
    AURION FUTURE — brand mark + wordmark lockup.
-   "Signal A" monogram (kept in sync with app/lib/brand-mark.ts):
-     • geometric "A"  — one bold off-white silhouette, sharp miter apex
-     • forward cut    — a single flat amber crossbar; the negative space above
-                        it reads as a hidden upward arrow (ascent / forward)
-   Flat colours only — no gradients, no orbit, no node, no 3D. Inline SVG so it
-   stays crisp and lightweight from a 16px favicon to the footer lockup.
+   "Apex / Forward Cut" monogram (kept in sync with app/lib/brand-mark.ts):
+     • geometric "A"  — one bold, solid off-white silhouette (apex + legs + bar)
+     • forward cut    — the enclosed counter is an amber upward arrowhead, a
+                        hidden forward / progress / signal cue inside the A
+   Flat fills only — no gradients, no orbit, no node, no 3D, no thin lines.
+   Inline SVG so it stays crisp from a 16px favicon to the footer lockup.
    ========================================================================== */
 
 export function BrandMark({ className = 'h-10 w-10' }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} role="img" aria-hidden="true" fill="none">
-      <g fill="none" strokeLinecap="round" strokeLinejoin="miter">
-        <path d="M10.5 40 L24 8.5 L37.5 40" stroke="#F8FAFC" strokeWidth="6" />
-        <path d="M17.4 29 H30.6" stroke="#F4B740" strokeWidth="5" />
-      </g>
+      {/* solid A with the counter cut out */}
+      <path
+        fill="#F8FAFC"
+        fillRule="evenodd"
+        d="M24 5.5 L42 42 L33 42 L27 34 L21 34 L15 42 L6 42 Z M24 16 L30 30 L24 26 L18 30 Z"
+      />
+      {/* amber forward arrowhead filling the counter */}
+      <path fill="#F4B740" d="M24 16 L30 30 L24 26 L18 30 Z" />
     </svg>
   );
 }

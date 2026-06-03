@@ -1,11 +1,12 @@
 /* ==========================================================================
    AURION FUTURE — brand mark (single source of truth for generated assets).
-   "Signal A" — a minimal, flat, premium SaaS monogram (Linear / Vercel grade):
-     • geometric "A"  — one bold off-white silhouette, sharp miter apex
-     • forward cut    — a single flat amber crossbar; the negative-space
-                        triangle above it reads as a hidden upward arrow (ascent)
-   FLAT colours only — off-white #F8FAFC + amber #F4B740. No gradients, no
-   orbit, no node, no star, no 3D. Strong silhouette down to 16px.
+   "Apex / Forward Cut" — a minimal, flat, premium SaaS monogram:
+     • geometric "A"  — one bold, solid off-white silhouette (apex + legs +
+                        crossbar), unmistakable down to 16px
+     • forward cut    — the enclosed counter is a single amber upward arrowhead,
+                        a hidden forward / progress / signal cue inside the A
+   FLAT fills only — off-white #F8FAFC + amber #F4B740. No gradients, no orbit,
+   no node, no star, no 3D, no thin lines. Strong silhouette on dark.
 
    `brandMarkSvg()` returns a standalone, transparent SVG string. It is consumed
    by the Next.js metadata routes (app/apple-icon, app/opengraph-image) as a data
@@ -14,10 +15,8 @@
 
 export function brandMarkSvg(size = 48): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 48 48" fill="none">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="miter">
-    <path d="M10.5 40 L24 8.5 L37.5 40" stroke="#F8FAFC" stroke-width="6"/>
-    <path d="M17.4 29 H30.6" stroke="#F4B740" stroke-width="5"/>
-  </g>
+  <path fill="#F8FAFC" fill-rule="evenodd" d="M24 5.5 L42 42 L33 42 L27 34 L21 34 L15 42 L6 42 Z M24 16 L30 30 L24 26 L18 30 Z"/>
+  <path fill="#F4B740" d="M24 16 L30 30 L24 26 L18 30 Z"/>
 </svg>`;
 }
 

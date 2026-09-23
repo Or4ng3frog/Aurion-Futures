@@ -112,7 +112,7 @@ export const principles = [
     kicker: '03',
     icon: 'Rocket' as const,
     title: 'Built for momentum',
-    body: 'Every pick is chosen to help creators, traders and founders ship faster — this week, not someday. Velocity is the whole point.'
+    body: 'Every pick is chosen to help creators, founders and small teams ship faster — this week, not someday. Velocity is the whole point.'
   }
 ];
 

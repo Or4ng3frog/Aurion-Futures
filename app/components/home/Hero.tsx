@@ -69,8 +69,7 @@ export default function Hero() {
             variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } } }}
             className="mt-6 max-w-xl text-lg leading-8 text-slate-400"
           >
-            A curated, tested and independent shortlist of AI tools for creators,
-            traders and founders — built to help you go from idea to published asset
+            A curated, tested and independent shortlist of AI tools for creators, founders and small teams — built to help you go from idea to published asset
             without wasting weeks comparing software.
           </motion.p>
 
